@@ -1,0 +1,17 @@
+﻿using System;
+using Xamarin.Forms;
+
+namespace truxie.Shared
+{
+	public static class truxieApp
+	{
+
+
+		private static Page homeView;
+		public static Page RootPage
+		{
+			get { return homeView ?? (homeView = new HomeView ()); }
+		}
+	}
+}
+

@@ -1,0 +1,43 @@
+# Version: 7.2.6.28 (606f31a)
+# [first argument, ignore] # /Development/xamarin/truxie.Forms-master/truxie.iOS/bin/iPhoneSimulator/Debug/mtouch.exe
+/Developer/MonoTouch/usr/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Development/xamarin/truxie.Forms-master/truxie.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-sim \
+	/Development/xamarin/truxie.Forms-master/truxie.iOS/bin/iPhoneSimulator/Debug/truxieiOS.app \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Net.Http.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Xml.Linq.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/Microsoft.Net.Http.2.2.18/lib/portable-net45+win8/System.Net.Http.Primitives.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/Microsoft.Net.Http.2.2.18/lib/portable-net45+win8/System.Net.Http.Extensions.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/LinqToTwitter.3.0.3/lib/portable-win8+net45+wp8/LinqToTwitterPcl.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/Xamarin.Forms.1.0.6188/lib/MonoTouch10/Xamarin.Forms.Core.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/Xamarin.Forms.1.0.6188/lib/MonoTouch10/Xamarin.Forms.Platform.iOS.dll \
+	-r \
+	/Development/xamarin/truxie.Forms-master/packages/Xamarin.Forms.1.0.6188/lib/MonoTouch10/Xamarin.Forms.Xaml.dll \
+	-debug \
+	-nolink \
+	-sdk \
+	6.1 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	/Development/xamarin/truxie.Forms-master/truxie.iOS/bin/iPhoneSimulator/Debug/HanselmaniOS.exe \
