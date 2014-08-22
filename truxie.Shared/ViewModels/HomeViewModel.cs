@@ -28,7 +28,7 @@ namespace truxie.Shared
 				Id = 3, Title = "nearby now", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 4, Title = "tweets", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
+				Id = 4, Title = "tweets", MenuType = MenuType.Tweets,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
 				Id = 5, Title = "calendar", MenuType = MenuType.Twitter,  Icon = "twitternav.png"

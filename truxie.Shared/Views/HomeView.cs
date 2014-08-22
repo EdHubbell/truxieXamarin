@@ -63,6 +63,7 @@ namespace truxie.Shared
 		private AboutView about;
 		private BlogView blog;
 		private TwitterView twitter;
+		private TwittesView twittes;
 
 		public HomeMasterView(HomeViewModel viewModel)
 		{
@@ -120,6 +121,12 @@ namespace truxie.Shared
 						twitter = new TwitterView();
 
 					PageSelection = twitter;
+					break;
+				case MenuType.Tweets:
+					if (twittes == null)
+						twittes = new TwittesView();
+
+					PageSelection = twittes;
 					break;
 				}
 			};

@@ -34,5 +34,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebsiteView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)truxieApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TwittesView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TwittesViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PullToRefreshListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweets.cs" />
   </ItemGroup>
 </Project>
