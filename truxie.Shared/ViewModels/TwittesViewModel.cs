@@ -38,7 +38,7 @@ namespace truxie.Shared
 			IsBusy = true;
 			Items.Clear ();
 
-			await Task.Run(()=>{ Service.GetTweetsInitData("35.994033", "-78.898619", 0, 20); });
+			await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", 0, 20); });
 			CurItemNumber = 20;
 			// Test Data
 			Tweets _item1 = new Tweets ();
@@ -64,7 +64,7 @@ namespace truxie.Shared
 
 			IsBusy = true;
 
-			await Task.Run(()=>{ Service.GetTweetsInitData("35.994033", "-78.898619", CurItemNumber, 20); });
+			await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", CurItemNumber, 20); });
 			CurItemNumber += 20;
 
 			// Test Data

@@ -40,7 +40,7 @@ namespace truxie.iOS
 			
 			// make the window visible
 			window.MakeKeyAndVisible ();
-			
+
 			return true;
 		}
 	}
