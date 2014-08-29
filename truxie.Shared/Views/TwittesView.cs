@@ -32,13 +32,70 @@ namespace truxie.Shared
 				Message = "loading..."
 			};
 
-			var cell = new DataTemplate(typeof(ListImageCell));
-			cell.SetBinding (ImageCell.TextProperty, "ScreenName");
-			cell.SetBinding (ImageCell.DetailProperty, "Text");
-			cell.SetBinding (ImageCell.ImageSourceProperty, "UserImage");
+//			var cell = new DataTemplate(typeof(ListImageCell));
+//			cell.SetBinding (ImageCell.TextProperty, "ScreenName");
+//			cell.SetBinding (ImageCell.DetailProperty, "Text");
+//			cell.SetBinding (ImageCell.ImageSourceProperty, "UserImage");
+//			refreshList.ItemTemplate = cell;
 
-			refreshList.ItemTemplate = cell;
+			refreshList.RowHeight = 60;
 
+			refreshList.ItemTemplate = new DataTemplate (() => {
+
+				Label labelUserName=new Label{
+					TextColor=Color.Black,
+					BackgroundColor=Color.Transparent,
+					Font = Font.SystemFontOfSize(12,FontAttributes.Bold)};
+				labelUserName.SetBinding (Label.TextProperty, "ScreenName");
+				Label labelTweet=new Label{
+					TextColor=Color.Black,
+					BackgroundColor=Color.Transparent,
+					Font = Font.SystemFontOfSize(10,FontAttributes.None),
+					VerticalOptions = LayoutOptions.Start,
+					HorizontalOptions = LayoutOptions.FillAndExpand};
+				labelTweet.SetBinding (Label.TextProperty, "Text");
+
+				Image boxView=new Image(){VerticalOptions = LayoutOptions.Start,
+					WidthRequest=40, HeightRequest=40};
+
+				Button button=new Button(){
+					VerticalOptions = LayoutOptions.Start,
+					BorderRadius=5,
+					HeightRequest=40,
+					WidthRequest=40,
+					BorderColor=Color.Gray,
+					BorderWidth=1 };
+				//button.BackgroundColor=Color.Gray;
+				//button.IsEnabled=false;
+				BoxView v=new BoxView(){ };
+
+				button.SetBinding(Button.ImageProperty,"UserImage");
+				button.Image =new FileImageSource(){};
+
+				boxView.SetBinding (Image.SourceProperty, "UserImage");
+				boxView.BackgroundColor=Color.Transparent;
+
+				return new ViewCell{
+					View=new StackLayout{ 
+						HeightRequest=60,
+						//BackgroundColor= Color.Gray,
+						Padding = new Thickness(5,1,5,1),
+						Orientation = StackOrientation.Horizontal,
+						Children={
+							boxView,
+							new StackLayout{
+								//BackgroundColor=Color.Green,
+								Spacing = 0,
+								VerticalOptions = LayoutOptions.StartAndExpand,
+								HorizontalOptions = LayoutOptions.FillAndExpand,
+								Orientation= StackOrientation.Vertical,
+								Children={labelUserName, labelTweet}
+							}
+						}
+					}
+				};
+			});
+			//refreshList.RowHeight = 100;
 			refreshList.SetBinding<TwittesViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
 			refreshList.SetBinding<TwittesViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
 

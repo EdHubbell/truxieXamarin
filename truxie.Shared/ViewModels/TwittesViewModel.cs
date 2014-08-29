@@ -59,7 +59,6 @@ namespace truxie.Shared
 				Items.Add (newTweet);
 			}
 
-
 			IsBusy = false;
 		}
 
@@ -75,7 +74,7 @@ namespace truxie.Shared
 				return;
 
 			IsBusy = true;
-
+//			Test Code
 			await Task.Run (() => {
 				Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
 			});
