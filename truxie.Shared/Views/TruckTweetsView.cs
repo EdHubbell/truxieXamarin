@@ -32,11 +32,6 @@ namespace truxie.Shared
 				Message = "loading..."
 			};
 
-//			var cell = new DataTemplate(typeof(ListImageCell));
-//			cell.SetBinding (ImageCell.TextProperty, "ScreenName");
-//			cell.SetBinding (ImageCell.DetailProperty, "Text");
-//			cell.SetBinding (ImageCell.ImageSourceProperty, "UserImage");
-//			refreshList.ItemTemplate = cell;
 
 			refreshList.RowHeight = 60;
 
@@ -45,12 +40,12 @@ namespace truxie.Shared
 				Label labelUserName=new Label{
 					TextColor=Color.Black,
 					BackgroundColor=Color.Transparent,
-					Font = Font.SystemFontOfSize(12,FontAttributes.Bold)};
+					Font = Font.SystemFontOfSize(14,FontAttributes.Bold)};
 				labelUserName.SetBinding (Label.TextProperty, "ScreenName");
 				Label labelTweet=new Label{
 					TextColor=Color.Black,
 					BackgroundColor=Color.Transparent,
-					Font = Font.SystemFontOfSize(10,FontAttributes.None),
+					Font = Font.SystemFontOfSize(1,FontAttributes.None),
 					VerticalOptions = LayoutOptions.Start,
 					HorizontalOptions = LayoutOptions.FillAndExpand};
 				labelTweet.SetBinding (Label.TextProperty, "Text");
