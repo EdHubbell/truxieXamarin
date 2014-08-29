@@ -22,6 +22,18 @@ System.Linq.dll
 System.Diagnostics.Debug.dll
 truxie.Portable.dll
 System.Net.Requests.dll
+Newtonsoft.Json.dll
+System.Text.Encoding.dll
+System.Text.RegularExpressions.dll
+System.Xml.ReaderWriter.dll
+System.Xml.XDocument.dll
+System.Xml.Linq.dll
+System.Runtime.Serialization.Primitives.dll
+System.Runtime.Serialization.dll
+System.Text.Encoding.Extensions.dll
+System.Diagnostics.Tools.dll
+Microsoft.CSharp.dll
+Mono.CSharp.dll
 System.Net.Primitives.dll
 Xamarin.Forms.Platform.iOS.dll
 System.Net.Http.dll
@@ -31,6 +43,4 @@ System.Runtime.InteropServices.dll
 System.Resources.ResourceManager.dll
 System.Linq.Queryable.dll
 System.Xml.XmlSerializer.dll
-System.Text.Encoding.dll
 System.IO.Compression.dll
-System.Xml.Linq.dll

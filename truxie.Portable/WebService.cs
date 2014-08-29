@@ -2,6 +2,7 @@
 using System.Net;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace truxie.Portable
 {
@@ -42,13 +43,12 @@ namespace truxie.Portable
 			} , httpReq);
 		}
 	
-		public async Task<string> GetTweetsData(String userLat, String userLon, int start, int limit)
+		public async Task<TweetResponse[]> GetTweetsData(String userLat, String userLon, int start, int limit)
 		{
 			string url=string.Format(@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
-
 			var res = await PerformRequest(url,"","GET");
-
-			return res;
+			return JsonConvert.DeserializeObject<TweetResponse[]> (res);
+			//return res;
 		}
 
 		protected Task<string> PerformRequest (string url, string method = "GET")
