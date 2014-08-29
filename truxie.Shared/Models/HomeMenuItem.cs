@@ -6,7 +6,6 @@ namespace truxie.Shared
 	{
 		About,
 		Blog,
-		Twitter, 
 		NearbyNow, 
 		Local, 
 		Tweets, 

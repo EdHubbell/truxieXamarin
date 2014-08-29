@@ -2,9 +2,9 @@
 
 namespace truxie.Shared
 {
-	public class Tweets
+	public class TruckTweet
 	{
-		public Tweets ()
+		public TruckTweet ()
 		{
 		}
 

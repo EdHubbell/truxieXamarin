@@ -51,6 +51,16 @@ namespace truxie.Portable
 			//return res;
 		}
 
+		public async Task<VendorCalendarEntryResponse[]> GetVendorCalendarEntryData(String userLat, String userLon, int page)
+		{
+			string url = string.Format(@"http://truxie.com/api/v1/truckCalendarEntries?_dc=1408411784370&userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
+			var res = await PerformRequest(url,"","GET");
+			return JsonConvert.DeserializeObject<VendorCalendarEntryResponse[]> (res);
+			//return res;
+		}
+
+
+
 		protected Task<string> PerformRequest (string url, string method = "GET")
 		{
 			return GetResponse (CreateRequest (url, method));

@@ -3,15 +3,15 @@ using Xamarin.Forms;
 
 namespace truxie.Shared
 {
-	public class TwittesView : BaseView
+	public class TruckTweetsView : BaseView
 	{
-		private TwittesViewModel ViewModel
+		private TruckTweetsViewModel ViewModel
 		{
-			get { return BindingContext as TwittesViewModel; }
+			get { return BindingContext as TruckTweetsViewModel; }
 		}
-		public TwittesView ()
+		public TruckTweetsView ()
 		{
-			BindingContext = new TwittesViewModel ();
+			BindingContext = new TruckTweetsViewModel ();
 
 			var refresh = new ToolbarItem {
 				Command = ViewModel.RefreshCommand,
@@ -96,14 +96,14 @@ namespace truxie.Shared
 				};
 			});
 			//refreshList.RowHeight = 100;
-			refreshList.SetBinding<TwittesViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
-			refreshList.SetBinding<TwittesViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
+			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
+			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
 
 			refreshList.ItemTapped +=  (sender, args) => {
 				if(refreshList.SelectedItem == null)
 					return;
 
-				var tweets = refreshList.SelectedItem as Tweets;
+				var tweets = refreshList.SelectedItem as TruckTweet;
 
 				refreshList.SelectedItem = null;
 			};

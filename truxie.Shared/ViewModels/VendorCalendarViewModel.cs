@@ -1,28 +1,27 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
-using LinqToTwitter;
 using System.Threading.Tasks;
 using System.Linq;
 using truxie.Portable;
 
 namespace truxie.Shared
 {
-	public class TwittesViewModel : BaseViewModel
+	public class VendorCalendarViewModel : BaseViewModel
 	{
 		WebService Service;
 
-		public ObservableCollection<Tweets> Items{ get; set; }
+		public ObservableCollection<VendorCalendarEntry> Items{ get; set; }
 
 		int CurItemNumber = 0;
 
-		public TwittesViewModel ()
+		public VendorCalendarViewModel ()
 		{
 			CurItemNumber = 0;
 			Service = new WebService ();
-			Title = "truck tweets";
+			Title = "calendar";
 			Icon = "slideout.png";
-			Items = new ObservableCollection<Tweets> ();
+			Items = new ObservableCollection<VendorCalendarEntry> ();
 			IsBusy = false;
 		}
 
@@ -41,22 +40,22 @@ namespace truxie.Shared
 			Items.Clear ();
 
 			//await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", 0, 20); });
-			var res = await Service.GetTweetsData ("35.994033", "-78.898619", 0, 20);
+			var res = await Service.GetVendorCalendarEntryData ("35.994033", "-78.898619", 1);
 			//var tList= JsonConvert.DeserializeObject<U> (res);
 			CurItemNumber = 20;
 			// Test Data
-//			Tweets _item1 = new Tweets ();
-//			_item1.ScreenName = "NCBullkogi";
-//			_item1.Text = "@SoniaH81";
-//			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-//			Items.Add (_item1);
+			//			Tweets _item1 = new Tweets ();
+			//			_item1.ScreenName = "NCBullkogi";
+			//			_item1.Text = "@SoniaH81";
+			//			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
+			//			Items.Add (_item1);
 
 			foreach (var item in res) {
-				Tweets newTweet = new Tweets ();
-				newTweet.ScreenName = item.User.ScreenName;
-				newTweet.Text = item.Text;
-				newTweet.UserImage = item.User.ProfileImageUrl;// "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-				Items.Add (newTweet);
+				VendorCalendarEntry newVendorCalendarEntry = new VendorCalendarEntry ();
+				newVendorCalendarEntry.VendorName = item.VendorName;
+				newVendorCalendarEntry.ImageUrl = item.ImageUrl; 
+				newVendorCalendarEntry.Summary = item.Summary;
+				Items.Add (newVendorCalendarEntry);
 			}
 
 			IsBusy = false;
@@ -74,19 +73,12 @@ namespace truxie.Shared
 				return;
 
 			IsBusy = true;
-//			Test Code
+			//			Test Code
 			await Task.Run (() => {
-				Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
+				Service.GetVendorCalendarEntryData ("35.994033", "-78.898619", 1);
 			});
 			CurItemNumber += 20;
 
-			// Test Data
-			Tweets _item1 = new Tweets ();
-			_item1.ScreenName = "NCBullkogi";
-			_item1.Text = "@SoniaH81";
-			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-
-			Items.Add (_item1);
 
 			IsBusy = false;
 		}

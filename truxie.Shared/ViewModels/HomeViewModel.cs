@@ -25,22 +25,19 @@ namespace truxie.Shared
 				Id = 1, Title = "Blog", MenuType = MenuType.Blog, Icon = "blog.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 2, Title = "Twitter", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
+				Id = 2, Title = "nearby now", MenuType = MenuType.NearbyNow ,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 3, Title = "nearby now", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
+				Id = 3, Title = "tweets", MenuType = MenuType.Tweets,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 4, Title = "tweets", MenuType = MenuType.Tweets,  Icon = "twitternav.png"
+				Id = 4, Title = "calendar", MenuType = MenuType.Calendar,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 5, Title = "calendar", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
+				Id = 5, Title = "user tools", MenuType = MenuType.UserTools,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 6, Title = "user tools", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
-			});
-			MenuItems.Add (new HomeMenuItem {
-				Id = 7, Title = "my location", MenuType = MenuType.Twitter,  Icon = "twitternav.png"
+				Id = 6, Title = "my location", MenuType = MenuType.MyLocation,  Icon = "twitternav.png"
 			});
 		}
 

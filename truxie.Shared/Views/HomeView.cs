@@ -71,8 +71,8 @@ namespace truxie.Shared
 
 		private AboutView about;
 		private BlogView blog;
-		private TwitterView twitter;
-		private TwittesView twittes;
+		private TruckTweetsView truckTweets;
+		private VendorCalendarView vendorCalendar;
 
 		public HomeMasterView (HomeViewModel viewModel)
 		{
@@ -141,6 +141,7 @@ namespace truxie.Shared
 				about = new AboutView ();
 
 			PageSelection = about;
+
 			//Change to the correct page
 			listView.ItemSelected += (sender, args) => {
 				var menuItem = listView.SelectedItem as HomeMenuItem;
@@ -158,18 +159,20 @@ namespace truxie.Shared
 						
 					PageSelection = blog;
 					break;
-				case MenuType.Twitter:
-					if (twitter == null)
-						twitter = new TwitterView ();
-
-					PageSelection = twitter;
-					break;
 				case MenuType.Tweets:
-					if (twittes == null)
-						twittes = new TwittesView ();
+					if (truckTweets == null)
+						truckTweets = new TruckTweetsView ();
 
-					PageSelection = twittes;
+					PageSelection = truckTweets;
 					break;
+
+				case MenuType.Calendar:
+					if (vendorCalendar == null)
+						vendorCalendar = new VendorCalendarView();
+
+					PageSelection = vendorCalendar;
+					break;
+
 				}
 			};
 
