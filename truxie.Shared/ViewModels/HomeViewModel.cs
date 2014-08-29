@@ -10,6 +10,9 @@ namespace truxie.Shared
 	public class HomeViewModel : BaseViewModel
 	{
 		public ObservableCollection<HomeMenuItem> MenuItems { get; set; }
+
+
+
 		public HomeViewModel ()
 		{
 			CanLoadMore = true;

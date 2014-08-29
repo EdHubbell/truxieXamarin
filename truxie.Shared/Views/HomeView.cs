@@ -10,8 +10,10 @@ namespace truxie.Shared
 		{
 			get { return BindingContext as HomeViewModel; }
 		}
+
 		HomeMasterView master;
 		private Dictionary<MenuType, NavigationPage> pages;
+
 		public HomeView ()
 		{
 			pages = new Dictionary<MenuType, NavigationPage> ();
@@ -45,6 +47,7 @@ namespace truxie.Shared
 
 			this.Icon = "slideout.png";
 		}
+
 	}
 
 
@@ -67,6 +70,7 @@ namespace truxie.Shared
 
 		public HomeMasterView(HomeViewModel viewModel)
 		{
+			BackgroundColor = Color.FromRgb (234, 234, 234);
 			this.Icon = "slideout.png";
 			BindingContext = viewModel;
 
@@ -75,23 +79,56 @@ namespace truxie.Shared
 
 			var label = new ContentView {
 				Padding = new Thickness(10, 36, 0, 5),
-				BackgroundColor = Color.Transparent,
+				BackgroundColor = Color.Transparent, 
+				HorizontalOptions=new LayoutOptions(LayoutAlignment.Center,true),
 				Content = new Label {
 					Text = "Find Food",
-					Font = Font.SystemFontOfSize (NamedSize.Medium)
+					Font = Font.SystemFontOfSize (NamedSize.Medium),
+					TextColor=Color.White
 				}
 			};
+			label.BackgroundColor = Color.Transparent;
+
 
 			layout.Children.Add(label);
 		
 			var listView = new ListView ();
+			listView.ItemTemplate = new DataTemplate (() => {
+				Label titleLabel=new Label();
+				titleLabel.SetBinding (Label.TextProperty, HomeViewModel.TitlePropertyName);
+				//titleLabel.SetBinding (ImageCell.ImageSourceProperty, "Icon");
+				titleLabel.TextColor=Color.White;
+				titleLabel.BackgroundColor=Color.Transparent;
+				//BoxView boxView=new BoxView();
+				Image boxView=new Image();
+				boxView.SetBinding (Image.SourceProperty, "Icon");
+				boxView.BackgroundColor=Color.Transparent;
 
-			var cell = new DataTemplate(typeof(ListImageCell));
+				return new ViewCell{
+					View=new StackLayout{
+						BackgroundColor= Color.Gray,
+						Padding = new Thickness(5,1,5,1),
+						Orientation = StackOrientation.Horizontal,
+						Children={
+							boxView,
+							new StackLayout{
+								BackgroundColor=Color.Transparent,
+								VerticalOptions = LayoutOptions.Center,
+								Spacing = 0,
+								Children={titleLabel}
+							}
+						}
+					}
+				};
+			});
 
-			cell.SetBinding (TextCell.TextProperty, HomeViewModel.TitlePropertyName);
-			cell.SetBinding (ImageCell.ImageSourceProperty, "Icon");
-
-			listView.ItemTemplate = cell;
+//			var cell = new DataTemplate(typeof(ListImageCell));
+//
+//			cell.SetBinding (TextCell.TextProperty, HomeViewModel.TitlePropertyName);
+//			cell.SetBinding (ImageCell.ImageSourceProperty, "Icon");
+//			cell.SetValue (TextCell.TextColorProperty, Color.Red);
+//
+//			listView.ItemTemplate = cell;
 
 			listView.ItemsSource = viewModel.MenuItems;
 			if (about == null)
@@ -131,9 +168,10 @@ namespace truxie.Shared
 				}
 			};
 
+
 			listView.SelectedItem = viewModel.MenuItems[0];
 			layout.Children.Add(listView);
-
+			listView.BackgroundColor = Color.Gray;
 			Content = layout;
 		}
 	}

@@ -26,6 +26,7 @@ namespace truxieAndroid
 			cell.SetPadding(20, 10, 0, 10);
 			cell.DividerPadding = 50;
 
+
 			var div = new ShapeDrawable();
 			div.SetIntrinsicHeight(1);
 			//div.Paint.Set(new Paint { Color = Color.FromHex("00FFFFFF").ToAndroid() });

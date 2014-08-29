@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>truxie.Portable</RootNamespace>
     <AssemblyName>truxie.Portable</AssemblyName>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

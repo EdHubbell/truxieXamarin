@@ -5,8 +5,6 @@ namespace truxie.Shared
 {
 	public static class truxieApp
 	{
-
-
 		private static Page homeView;
 		public static Page RootPage
 		{
