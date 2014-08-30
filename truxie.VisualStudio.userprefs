@@ -1,27 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="truxie.Portable/WebService.cs">
-    <Files>
-      <File FileName="truxie.Shared/ViewModels/TwittesViewModel.cs" Line="1" Column="1" />
-      <File FileName="truxie.Portable/WebService.cs" Line="3" Column="3" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="truxie.iOS" expanded="True" />
-          <Node name="truxie.Portable" expanded="True" selected="True" />
-          <Node name="truxie.Shared" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="32" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="40" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="58" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="48" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="22" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="108" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="116" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="134" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="124" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="98" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

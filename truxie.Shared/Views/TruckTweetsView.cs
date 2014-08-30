@@ -45,7 +45,7 @@ namespace truxie.Shared
 				Label labelTweet=new Label{
 					TextColor=Color.Black,
 					BackgroundColor=Color.Transparent,
-					Font = Font.SystemFontOfSize(1,FontAttributes.None),
+					Font = Font.SystemFontOfSize(12,FontAttributes.None),
 					VerticalOptions = LayoutOptions.Start,
 					HorizontalOptions = LayoutOptions.FillAndExpand};
 				labelTweet.SetBinding (Label.TextProperty, "Text");

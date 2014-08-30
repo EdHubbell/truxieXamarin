@@ -15,9 +15,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListImageCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Scott.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TwitterViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BlogFeedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FeedItem.cs" />
@@ -27,16 +25,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\HomeMenuItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\TwitterView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BlogView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BlogDetailsView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebsiteView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)truxieApp.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\TwittesView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TwittesViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\PullToRefreshListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Tweets.cs" />
   </ItemGroup>
 </Project>
