@@ -18,6 +18,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Scott.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BlogFeedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TruckTweetsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\VendorCalendarViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\VendorCalendarEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TruckTweet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FeedItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\HomeView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BaseView.cs" />
@@ -29,6 +33,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BlogDetailsView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebsiteView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TruckTweetsView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\VendorCalendarView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)truxieApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\PullToRefreshListView.cs" />
