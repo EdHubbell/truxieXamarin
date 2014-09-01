@@ -47,7 +47,13 @@ namespace truxie.Portable
 		{
 			string url=string.Format(@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
 			var res = await PerformRequest(url,"","GET");
-			return JsonConvert.DeserializeObject<TweetResponse[]> (res);
+			TweetResponse[] result=null;
+			try {
+				result=JsonConvert.DeserializeObject<TweetResponse[]> (res);
+			} catch (Exception) {
+					
+			}
+			return result;
 			//return res;
 		}
 

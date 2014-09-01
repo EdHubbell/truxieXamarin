@@ -38,5 +38,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)truxieApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\PullToRefreshListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TweetesCell.cs" />
   </ItemGroup>
 </Project>

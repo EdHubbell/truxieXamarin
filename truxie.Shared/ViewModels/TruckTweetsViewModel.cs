@@ -14,7 +14,7 @@ namespace truxie.Shared
 
 		public ObservableCollection<TruckTweet> Items{ get; set; }
 
-		int CurItemNumber = 0;
+		public int CurItemNumber = 0;
 
 		public TruckTweetsViewModel ()
 		{
@@ -75,18 +75,28 @@ namespace truxie.Shared
 
 			IsBusy = true;
 //			Test Code
-			await Task.Run (() => {
-				Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
-			});
+//			await Task.Run (() => {
+//				Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
+//			});
+//			CurItemNumber += 20;
+//
+//			// Test Data
+//			TruckTweet _item1 = new TruckTweet ();
+//			_item1.ScreenName = "NCBullkogi";
+//			_item1.Text = "@SoniaH81";
+//			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
+//
+//			Items.Add (_item1);
+
+			var res = await Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
 			CurItemNumber += 20;
-
-			// Test Data
-			TruckTweet _item1 = new TruckTweet ();
-			_item1.ScreenName = "NCBullkogi";
-			_item1.Text = "@SoniaH81";
-			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-
-			Items.Add (_item1);
+			foreach (var item in res) {
+				TruckTweet newTweet = new TruckTweet ();
+				newTweet.ScreenName = item.User.ScreenName;
+				newTweet.Text = item.Text;
+				newTweet.UserImage = item.User.ProfileImageUrl;// "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
+				Items.Add (newTweet);
+			}
 
 			IsBusy = false;
 		}
