@@ -1,1 +1,0 @@
-/Development/xamarin/truxie.Forms-master/truxie.Android/obj/Debug/MonoAndroid,Version=v4.0.3.AssemblyAttribute.cs
