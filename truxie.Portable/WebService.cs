@@ -11,56 +11,66 @@ namespace truxie.Portable
 		public WebService ()
 		{
 		}
-		string base_url=string.Format(@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", 35.994033, -78.898619, 0, 20);
 
-		public void GetTweetsInitData(String userLat, String userLon, int start, int limit)
+		string base_url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", 35.994033, -78.898619, 0, 20);
+
+		public void GetTweetsInitData (String userLat, String userLon, int start, int limit)
 		{
-			string url = string.Format(@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
+			string url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
 			var httpReq = (HttpWebRequest)HttpWebRequest.Create (new Uri (url));
 
 			httpReq.BeginGetResponse ((ar) => {
 				int success = 0;
 				String msg = "Cannot connect to server";
 
-				try
-				{
+				try {
 					var request = (HttpWebRequest)ar.AsyncState;
-					using (var response = (HttpWebResponse)request.EndGetResponse (ar))     {                           
+					using (var response = (HttpWebResponse)request.EndGetResponse (ar)) {                           
 
-						try{
+						try {
 							var s = response.GetResponseStream ();
 
-						}
-						catch (Exception e)
-						{
+						} catch (Exception e) {
 						}
 					}
-				}
-				catch (Exception e)
-				{
+				} catch (Exception e) {
 				}
 
-			} , httpReq);
+			}, httpReq);
 		}
-	
-		public async Task<TweetResponse[]> GetTweetsData(String userLat, String userLon, int start, int limit)
+
+		public async Task<StatusesResponse> GetCurrUserTweetsData (string currId, string currentUser)
 		{
-			string url=string.Format(@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
-			var res = await PerformRequest(url,"","GET");
-			TweetResponse[] result=null;
+			string url = string.Format (@"http://api.truxie.com/api/v1/twitterSearch?_dc={0}&include_entities=false&result_type=recent&q={1}&count=20", currId, currentUser);
+			var res = await PerformRequest (url, "", "GET");
+			StatusesResponse result = null;
 			try {
-				result=JsonConvert.DeserializeObject<TweetResponse[]> (res);
-			} catch (Exception) {
-					
+				result = JsonConvert.DeserializeObject<StatusesResponse> (res);
+			} catch (Exception ex) {
+				var temp = ex;
+			}
+			return result;
+		}
+
+		public async Task<TweetResponse[]> GetTweetsData (String userLat, String userLon, int start, int limit)
+		{
+			string url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
+			var res = await PerformRequest (url, "", "GET");
+			TweetResponse[] result = null;
+			try {
+
+				result = JsonConvert.DeserializeObject<TweetResponse[]> (res);
+			} catch (Exception ex) {
+				var message = ex.Message;
 			}
 			return result;
 			//return res;
 		}
 
-		public async Task<VendorCalendarEntryResponse[]> GetVendorCalendarEntryData(String userLat, String userLon, int page)
+		public async Task<VendorCalendarEntryResponse[]> GetVendorCalendarEntryData (String userLat, String userLon, int page)
 		{
-			string url = string.Format(@"http://truxie.com/api/v1/truckCalendarEntries?_dc=1408411784370&userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
-			var res = await PerformRequest(url,"","GET");
+			string url = string.Format (@"http://truxie.com/api/v1/truckCalendarEntries?_dc=1408411784370&userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
+			var res = await PerformRequest (url, "", "GET");
 			return JsonConvert.DeserializeObject<VendorCalendarEntryResponse[]> (res);
 			//return res;
 		}
@@ -87,10 +97,10 @@ namespace truxie.Portable
 			return await GetResponse (request);
 		}
 
-//		protected virtual string BuildRequestUrl ()
-//		{
-//			return string url = BASE_URL;
-//		}
+		//		protected virtual string BuildRequestUrl ()
+		//		{
+		//			return string url = BASE_URL;
+		//		}
 
 		private HttpWebRequest CreateRequest (string url, string method)
 		{

@@ -34,7 +34,7 @@ namespace truxie.iOS
 				});
 			Forms.Init();
 			page = truxie.Shared.truxieApp.RootPage;
-			window.RootViewController = page.CreateViewController ();
+			window.RootViewController =  page.CreateViewController ();
 			// If you have defined a root view controller, set it here:
 			// window.RootViewController = myViewController;
 			

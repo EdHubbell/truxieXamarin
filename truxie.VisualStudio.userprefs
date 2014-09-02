@@ -1,17 +1,32 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.iOlympus’s iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="truxie.iOS/Main.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="truxie.Shared/Models/HomeMenuItem.cs">
     <Files>
       <File FileName="truxie.Shared/ViewModels/HomeViewModel.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/Views/HomeView.cs" Line="1" Column="1" />
+      <File FileName="truxie.Shared/Views/HomeView.cs" Line="28" Column="28" />
       <File FileName="truxie.Shared/Helpers/TweetesCell.cs" Line="1" Column="1" />
-      <File FileName="truxie.Portable/WebService.cs" Line="7" Column="7" />
-      <File FileName="truxie.iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="truxie.Portable/WebService.cs" Line="71" Column="71" />
+      <File FileName="truxie.iOS/AppDelegate.cs" Line="2" Column="2" />
       <File FileName="truxie.Shared/truxieApp.cs" Line="1" Column="1" />
       <File FileName="truxie.iOS/Main.cs" Line="1" Column="1" />
       <File FileName="truxie.Portable/Model/Response.cs" Line="34" Column="34" />
       <File FileName="../../../../../../../../Developer/MonoTouch/Source/mono/mcs/class/corlib/System.Runtime.CompilerServices/AsyncVoidMethodBuilder.cs" Line="1" Column="1" />
+      <File FileName="truxie.Shared/ViewModels/TruckTweetsViewModel.cs" Line="17" Column="17" />
+      <File FileName="truxie.Shared/Models/HomeMenuItem.cs" Line="3" Column="3" />
+      <File FileName="truxie.iOS/app.config" Line="1" Column="1" />
+      <File FileName="truxie.Shared/Views/TruckTweetsView.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="truxie.iOS" expanded="True" selected="True" />
+          <Node name="truxie.Portable" expanded="True">
+            <Node name="Model" expanded="True" />
+          </Node>
+          <Node name="truxie.Shared" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

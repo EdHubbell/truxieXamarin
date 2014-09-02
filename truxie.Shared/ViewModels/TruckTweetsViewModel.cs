@@ -41,9 +41,35 @@ namespace truxie.Shared
 			Items.Clear ();
 
 			//await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", 0, 20); });
-			var res = await Service.GetTweetsData ("35.994033", "-78.898619", 0, 20);
-			//var tList= JsonConvert.DeserializeObject<U> (res);
+			if (string.IsNullOrEmpty (CurrentUser) && string.IsNullOrEmpty (CurrentUserID)) {
+				var res = await Service.GetTweetsData ("35.994033", "-78.898619", 0, 20);
+				foreach (var item in res) {
+					TruckTweet newTweet = new TruckTweet {
+						UserID = item.User.Id,
+						ScreenName = item.User.ScreenName,
+						Text = item.Text,
+						UserImage = item.User.ProfileImageUrl,
+						Date=item.CreatedAt
+					};
+					Items.Add (newTweet);
+				}
+			} else {
+				var res2 = await Service.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
+				if(res2!=null)
+				foreach (var item in res2.Statuses) {
+					TruckTweet newTweet = new TruckTweet {
+						UserID = item.User.Id,
+						ScreenName = item.User.ScreenName,
+						Text = item.Text,
+						UserImage = item.User.ProfileImageUrl,
+							Date=item.CreatedAt
+					};
+					Items.Add (newTweet);
+				}
+			}
+
 			CurItemNumber = 20;
+
 			// Test Data
 //			Tweets _item1 = new Tweets ();
 //			_item1.ScreenName = "NCBullkogi";
@@ -51,13 +77,7 @@ namespace truxie.Shared
 //			_item1.UserImage = "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
 //			Items.Add (_item1);
 
-			foreach (var item in res) {
-				TruckTweet newTweet = new TruckTweet ();
-				newTweet.ScreenName = item.User.ScreenName;
-				newTweet.Text = item.Text;
-				newTweet.UserImage = item.User.ProfileImageUrl;// "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-				Items.Add (newTweet);
-			}
+
 
 			IsBusy = false;
 		}
@@ -88,17 +108,42 @@ namespace truxie.Shared
 //
 //			Items.Add (_item1);
 
-			var res = await Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
-			CurItemNumber += 20;
-			foreach (var item in res) {
-				TruckTweet newTweet = new TruckTweet ();
-				newTweet.ScreenName = item.User.ScreenName;
-				newTweet.Text = item.Text;
-				newTweet.UserImage = item.User.ProfileImageUrl;// "http://pbs.twimg.com/profile_images/775609928/Bulkogi_Sticker_36x15_normal.jpg";
-				Items.Add (newTweet);
+			if (string.IsNullOrEmpty (CurrentUser) && string.IsNullOrEmpty (CurrentUserID)) {
+				var res = await Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
+				foreach (var item in res) {
+					TruckTweet newTweet = new TruckTweet ();
+					newTweet.ScreenName = item.User.ScreenName;
+					newTweet.Text = item.Text;
+					newTweet.UserImage = item.User.ProfileImageUrl;
+					newTweet.Date = item.CreatedAt;
+					Items.Add (newTweet);
+				}
+			}else {
+				var res2 = await Service.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
+				if(res2!=null)
+					foreach (var item in res2.Statuses) {
+						TruckTweet newTweet = new TruckTweet {
+							UserID = item.User.Id,
+							ScreenName = item.User.ScreenName,
+							Text = item.Text,
+							UserImage = item.User.ProfileImageUrl,
+							Date=item.CreatedAt
+						};
+						Items.Add (newTweet);
+					}
 			}
+			CurItemNumber += 20;
 
 			IsBusy = false;
+		}
+
+		public string CurrentUser {
+			get;
+			set;
+		}
+		public string CurrentUserID {
+			get;
+			set;
 		}
 	}
 }

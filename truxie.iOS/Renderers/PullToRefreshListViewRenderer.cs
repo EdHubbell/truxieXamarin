@@ -12,6 +12,7 @@ namespace truxie.iOS.Renderers
 	{
 		public PullToRefreshListViewRenderer ()
 		{
+
 		}
 
 		private FormsUIRefreshControl refreshControl;

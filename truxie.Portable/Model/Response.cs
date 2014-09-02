@@ -26,6 +26,9 @@ namespace truxie.Portable
 
 	public class User
 	{
+		[Newtonsoft.Json.JsonProperty ("name")]
+		public string Name{ get; set; }
+
 		[Newtonsoft.Json.JsonProperty ("screen_name")]
 		public string ScreenName{ get; set; }
 
@@ -44,6 +47,7 @@ namespace truxie.Portable
 		[Newtonsoft.Json.JsonProperty ("user")]
 		public User User{ get; set; }
 
+		[Newtonsoft.Json.JsonConverter(typeof(DateTimeConverter))]
 		[Newtonsoft.Json.JsonProperty ("created_at")]
 		public DateTime CreatedAt{ get; set; }
 
@@ -100,5 +104,25 @@ namespace truxie.Portable
 		}
 	}
 
+	public class StatusesResponse : Response{
+
+		[Newtonsoft.Json.JsonProperty ("statuses")]
+		public TweetResponse[] Statuses{ get; set; }
+
+//		[Newtonsoft.Json.JsonProperty ("metadata")]
+//		public string Metadata{ get; set; }
+
+//		[Newtonsoft.Json.JsonProperty ("user")]
+//		public User User{ get; set; }
+//
+//		[Newtonsoft.Json.JsonProperty ("text")]
+//		public string Text{ get; set; }
+//
+//		[Newtonsoft.Json.JsonProperty ("created_at")]
+//		public DateTime CreatedAt{ get; set; }
+//
+//		[Newtonsoft.Json.JsonProperty ("source")]
+//		public string Source{ get; set; }
+	}
 }
 
