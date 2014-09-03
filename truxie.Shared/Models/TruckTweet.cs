@@ -38,7 +38,7 @@ namespace truxie.Shared
 		{
 			string result = string.Empty;
 
-			var ticks = DateTime.Now.Ticks - date.Ticks;
+			var ticks = DateTime.UtcNow.Ticks - date.Ticks;
 			var timeAgo = new DateTime (ticks);
 
 			if (timeAgo.Month > 0 && timeAgo.Year > 1) {
