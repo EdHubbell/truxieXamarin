@@ -1,10 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
-using LinqToTwitter;
 using System.Threading.Tasks;
-using System.Linq;
-using truxie.Portable;
 
 namespace truxie.Shared
 {
@@ -12,6 +9,7 @@ namespace truxie.Shared
 	{
 		WebService Service;
 
+		//public ObservableCollection<TruckTweet> Items{ get; set; }
 		public ObservableCollection<TruckTweet> Items{ get; set; }
 
 		public int CurItemNumber = 0;
@@ -44,27 +42,29 @@ namespace truxie.Shared
 			if (string.IsNullOrEmpty (CurrentUser) && string.IsNullOrEmpty (CurrentUserID)) {
 				var res = await Service.GetTweetsData ("35.994033", "-78.898619", 0, 20);
 				foreach (var item in res) {
-					TruckTweet newTweet = new TruckTweet {
-						UserID = item.User.Id,
-						ScreenName = item.User.ScreenName,
-						Text = item.Text,
-						UserImage = item.User.ProfileImageUrl,
-						Date=item.CreatedAt
-					};
-					Items.Add (newTweet);
+//					TruckTweet newTweet = new TruckTweet {
+//						UserID = item.User.Id,
+//						ScreenName = item.User.ScreenName,
+//						Text = item.Text,
+//						UserImage = item.User.ProfileImageUrl,
+//						Date=item.CreatedAt
+//					};
+//					Items.Add (newTweet);
+					Items.Add (item);
 				}
 			} else {
 				var res2 = await Service.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
 				if(res2!=null)
 				foreach (var item in res2.Statuses) {
-					TruckTweet newTweet = new TruckTweet {
-						UserID = item.User.Id,
-						ScreenName = item.User.ScreenName,
-						Text = item.Text,
-						UserImage = item.User.ProfileImageUrl,
-							Date=item.CreatedAt
-					};
-					Items.Add (newTweet);
+//					TruckTweet newTweet = new TruckTweet {
+//						UserID = item.User.Id,
+//						ScreenName = item.User.ScreenName,
+//						Text = item.Text,
+//						UserImage = item.User.ProfileImageUrl,
+//							Date=item.CreatedAt
+//					};
+//					Items.Add (newTweet);
+						Items.Add (item);
 				}
 			}
 
@@ -111,25 +111,27 @@ namespace truxie.Shared
 			if (string.IsNullOrEmpty (CurrentUser) && string.IsNullOrEmpty (CurrentUserID)) {
 				var res = await Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
 				foreach (var item in res) {
-					TruckTweet newTweet = new TruckTweet ();
-					newTweet.ScreenName = item.User.ScreenName;
-					newTweet.Text = item.Text;
-					newTweet.UserImage = item.User.ProfileImageUrl;
-					newTweet.Date = item.CreatedAt;
-					Items.Add (newTweet);
+//					TruckTweet newTweet = new TruckTweet ();
+//					newTweet.ScreenName = item.User.ScreenName;
+//					newTweet.Text = item.Text;
+//					newTweet.UserImage = item.User.ProfileImageUrl;
+//					newTweet.Date = item.CreatedAt;
+//					Items.Add (newTweet);
+					Items.Add (item);
 				}
 			}else {
 				var res2 = await Service.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
 				if(res2!=null)
 					foreach (var item in res2.Statuses) {
-						TruckTweet newTweet = new TruckTweet {
-							UserID = item.User.Id,
-							ScreenName = item.User.ScreenName,
-							Text = item.Text,
-							UserImage = item.User.ProfileImageUrl,
-							Date=item.CreatedAt
-						};
-						Items.Add (newTweet);
+//						TruckTweet newTweet = new TruckTweet {
+//							UserID = item.User.Id,
+//							ScreenName = item.User.ScreenName,
+//							Text = item.Text,
+//							UserImage = item.User.ProfileImageUrl,
+//							Date=item.CreatedAt
+//						};
+//						Items.Add (newTweet);
+						Items.Add (item);
 					}
 			}
 			CurItemNumber += 20;

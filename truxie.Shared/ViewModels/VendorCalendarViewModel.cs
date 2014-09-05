@@ -3,7 +3,6 @@ using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Linq;
-using truxie.Portable;
 
 namespace truxie.Shared
 {
@@ -40,7 +39,7 @@ namespace truxie.Shared
 			Items.Clear ();
 
 			//await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", 0, 20); });
-			var res = await Service.GetVendorCalendarEntryData ("35.994033", "-78.898619", 1);
+			var res = await Service.GetVendorCalendarEntryList ("35.994033", "-78.898619", 1);
 			//var tList= JsonConvert.DeserializeObject<U> (res);
 			CurItemNumber = 20;
 			// Test Data
@@ -75,7 +74,7 @@ namespace truxie.Shared
 			IsBusy = true;
 			//			Test Code
 			await Task.Run (() => {
-				Service.GetVendorCalendarEntryData ("35.994033", "-78.898619", 1);
+				Service.GetVendorCalendarEntryList ("35.994033", "-78.898619", 1);
 			});
 			CurItemNumber += 20;
 

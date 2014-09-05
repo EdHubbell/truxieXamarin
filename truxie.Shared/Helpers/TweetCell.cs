@@ -20,7 +20,7 @@ namespace truxie.Shared
 				BackgroundColor = Color.Transparent,
 				Font = Font.SystemFontOfSize (14, FontAttributes.Bold)
 			};
-			labelUserName.SetBinding (Label.TextProperty, "ScreenName");
+			labelUserName.SetBinding (Label.TextProperty, "User.ScreenName");
 
 			labelTweet = new Label {
 				TextColor = Color.Black,
@@ -35,7 +35,7 @@ namespace truxie.Shared
 			Image imageUser = new Image () {VerticalOptions = LayoutOptions.Start,
 				WidthRequest = 40, HeightRequest = 40
 			};
-			imageUser.SetBinding (Image.SourceProperty, "UserImage");
+			imageUser.SetBinding (Image.SourceProperty, "User.ProfileImageUrl");
 			imageUser.BackgroundColor = Color.Transparent;
 
 			labelTime = new Label {
@@ -46,7 +46,7 @@ namespace truxie.Shared
 				BackgroundColor = Color.Transparent,
 				Font = Font.SystemFontOfSize (12, FontAttributes.Bold)
 			};
-			labelTime.SetBinding (Label.TextProperty, "DateString");
+			labelTime.SetBinding (Label.TextProperty, "DateAgo");
 
 			View = new StackLayout { 
 				Padding = new Thickness (paddingOffset),
@@ -89,7 +89,7 @@ namespace truxie.Shared
 		protected override void OnBindingContextChanged ()
 		{
 			base.OnBindingContextChanged ();
-			var tweet = (truxie.Shared.TruckTweet)BindingContext;
+			var tweet = (TruckTweet)BindingContext;
 		}
 
 	}

@@ -2,64 +2,77 @@
 
 namespace truxie.Shared
 {
-	public class TruckTweet
+	public class TruckTweet:Response
 	{
 		public TruckTweet ()
 		{
 		}
 
-		public ulong StatusID { get; set; }
+		[Newtonsoft.Json.JsonProperty ("text")]
+		public string Text{ get; set; }
 
-		public string ScreenName { get; set; }
+		[Newtonsoft.Json.JsonProperty ("user")]
+		public User User{ get; set; }
 
-		public string Text { get; set; }
+		[Newtonsoft.Json.JsonConverter(typeof(DateTimeConverter))]
+		[Newtonsoft.Json.JsonProperty ("created_at")]
+		public DateTime CreatedAt{ get; set; }
 
-		DateTime date = DateTime.MinValue;
+		[Newtonsoft.Json.JsonProperty ("source")]
+		public string Source{ get; set; }
 
-		public DateTime Date { 
-			get{ return date; }
-			set {
-				date = value;
-				DateString = ParseDate (date);
-			}
-		}
+		[Newtonsoft.Json.JsonProperty ("foodtruck_id")]
+		public string FoodtruckId{ get; set; }
 
-		public string UserImage { get; set; }
+		[Newtonsoft.Json.JsonProperty ("truxie_tweet_id")]
+		public string TruxieTweetId{ get; set; }
 
-		public string UserID { get;	set; }
+		[Newtonsoft.Json.JsonProperty ("truxie_timestamp")]
+		public DateTime TruxieTimestamp{ get; set; }
 
-		public string DateString {
-			get;
-			set;
+		public string DateAgo { 
+			get{ return ParseDate(CreatedAt); }
 		}
 
 		string ParseDate (DateTime date)
 		{
 			string result = string.Empty;
 
-			var ticks = DateTime.UtcNow.Ticks - date.Ticks;
-			var timeAgo = new DateTime (ticks);
+			// added try block because time conversions are always a crapshoot.
+			try
+			{
 
-			if (timeAgo.Month > 0 && timeAgo.Year > 1) {
-				result = date.ToString ("d MMM");
-			} else if (timeAgo.Year > 1 && timeAgo.Day > 0 ) {
-				result = string.Format ("{0}d ", timeAgo.Day);
-				if (timeAgo.Hour > 0)
-					result += string.Format ("{0}h ", timeAgo.Hour);
-			} else if (timeAgo.Hour > 0) {
-				result = string.Format ("{0}h ", timeAgo.Hour);
-				if (timeAgo.Minute > 0)
-					result += string.Format ("{0}m ", timeAgo.Minute);
-			} else if (timeAgo.Minute > 0) {
-				result = string.Format ("{0}m ", timeAgo.Minute);
-				if (timeAgo.Second > 0)
-					result += string.Format ("{0}s ", timeAgo.Second);
-			} else {
-				result = string.Format ("{0}s ", timeAgo.Second);
+				var ticks = DateTime.UtcNow.Ticks - date.Ticks;
+				var timeAgo = new DateTime (ticks);
+
+				if (timeAgo.Month > 0 && timeAgo.Year > 1) {
+					result = date.ToString ("d MMM");
+				} else if (timeAgo.Year > 1 && timeAgo.Day > 0 ) {
+					result = string.Format ("{0}d ", timeAgo.Day);
+					if (timeAgo.Hour > 0)
+						result += string.Format ("{0}h ", timeAgo.Hour);
+				} else if (timeAgo.Hour > 0) {
+					result = string.Format ("{0}h ", timeAgo.Hour);
+					if (timeAgo.Minute > 0)
+						result += string.Format ("{0}m ", timeAgo.Minute);
+				} else if (timeAgo.Minute > 0) {
+					result = string.Format ("{0}m ", timeAgo.Minute);
+					if (timeAgo.Second > 0)
+						result += string.Format ("{0}s ", timeAgo.Second);
+				} else {
+					result = string.Format ("{0}s ", timeAgo.Second);
+				}
+
+			}
+
+			catch 
+			{
+				result = string.Empty;
 			}
 
 			return result;
 		}
+
 	}
 }
 

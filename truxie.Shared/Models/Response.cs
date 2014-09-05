@@ -2,11 +2,35 @@
 
 namespace truxie.Shared
 {
-
-	public class VendorCalendarEntry:Response
+	public	interface IRequested
 	{
-		public VendorCalendarEntry ()
+		[Newtonsoft.Json.JsonIgnore]
+		string URL{ get; }
+	}
+
+	public	interface IResponse
+	{
+		string Error{ get; set; }
+	}
+
+	public class Response:IResponse
+	{
+		#region IResponse implementation
+
+		public string Error { get; set; }
+
+		public bool HasError{ get { return !string.IsNullOrEmpty (Error); } }
+
+		#endregion
+	}
+
+
+	public class VendorEventsListResponse:Response
+	{
+
+		public VendorEventsListResponse ()
 		{
+
 		}
 
 		// These names are messed up - Need to get things squared away into one naming convention.
@@ -34,7 +58,13 @@ namespace truxie.Shared
 		[Newtonsoft.Json.JsonProperty ("summary")]
 		public string Summary { get; set; }
 
-
 	}
 
+	public class StatusesResponse : Response{
+
+		[Newtonsoft.Json.JsonProperty ("statuses")]
+		public TruckTweet[] Statuses{ get; set; }
+
+	}
 }
+

@@ -2,7 +2,6 @@
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using truxie.Portable;
 
 namespace truxie.Shared
 {

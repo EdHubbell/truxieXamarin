@@ -28,9 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\HomeMenuItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\Color.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BlogView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BlogDetailsView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\WebsiteView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\TruckTweetsView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\VendorCalendarView.cs" />
@@ -44,5 +42,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NearbyNowViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\NearbyNowView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\TweetCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DateTimeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Response.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\WebService.cs" />
   </ItemGroup>
 </Project>

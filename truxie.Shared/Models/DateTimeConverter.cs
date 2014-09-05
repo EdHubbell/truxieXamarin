@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace truxie.Portable
+namespace truxie.Shared
 {
 	public class DateTimeConverter: JsonConverter
 	{
@@ -41,6 +41,6 @@ namespace truxie.Portable
 		}
 	}
 
-	
+
 }
 

@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace truxie.Portable
+namespace truxie.Shared
 {
 	public class WebService
 	{
@@ -52,14 +52,14 @@ namespace truxie.Portable
 			return result;
 		}
 
-		public async Task<TweetResponse[]> GetTweetsData (String userLat, String userLon, int start, int limit)
+		public async Task<TruckTweet[]> GetTweetsData (String userLat, String userLon, int start, int limit)
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
 			var res = await PerformRequest (url, "", "GET");
-			TweetResponse[] result = null;
+			TruckTweet[] result = null;
 			try {
 
-				result = JsonConvert.DeserializeObject<TweetResponse[]> (res);
+				result = JsonConvert.DeserializeObject<TruckTweet[]> (res);
 			} catch (Exception ex) {
 				var message = ex.Message;
 			}
@@ -67,11 +67,11 @@ namespace truxie.Portable
 			//return res;
 		}
 
-		public async Task<VendorCalendarEntryResponse[]> GetVendorCalendarEntryData (String userLat, String userLon, int page)
+		public async Task<VendorCalendarEntry[]> GetVendorCalendarEntryList (String userLat, String userLon, int page)
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/truckCalendarEntries?userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
 			var res = await PerformRequest (url, "", "GET");
-			return JsonConvert.DeserializeObject<VendorCalendarEntryResponse[]> (res);
+			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (res);
 			//return res;
 		}
 

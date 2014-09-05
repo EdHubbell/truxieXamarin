@@ -149,18 +149,6 @@ namespace truxie.Shared
 				var menuItem = listView.SelectedItem as HomeMenuItem;
 				menuType = menuItem.MenuType;
 				switch (menuItem.MenuType) {
-//				case MenuType.About:
-//					if (about == null)
-//						about = new AboutView ();
-//
-//					PageSelection = about;
-//					break;
-//				case MenuType.Blog:
-//					if (blog == null)
-//						blog = new BlogView ();
-//						
-//					PageSelection = blog;
-//					break;
 				case MenuType.NearbyNow:
 					if (nearbyNow == null)
 						nearbyNow = new NearbyNowView ();
@@ -183,7 +171,6 @@ namespace truxie.Shared
 
 				}
 			};
-
 
 			listView.SelectedItem = viewModel.MenuItems [0];
 			layout.Children.Add (listView);

@@ -116,6 +116,9 @@
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\monotouch\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -162,11 +165,5 @@
   </Target>
   <ItemGroup>
     <Folder Include="Renderers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\truxie.Portable\truxie.Portable.csproj">
-      <Project>{298C9E88-7A1B-4E19-93EE-8667AE15D873}</Project>
-      <Name>truxie.Portable</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

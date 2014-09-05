@@ -7,9 +7,7 @@ namespace truxie.Shared
 		NearbyNow, 
 		Local, 
 		Tweets, 
-		Calendar, 
-		UserTools, 
-		MyLocation
+		Calendar 
 	}
 
 	public class HomeMenuItem : BaseModel

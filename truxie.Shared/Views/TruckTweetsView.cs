@@ -83,10 +83,10 @@ namespace truxie.Shared
 		PullToRefreshListView refreshList;
 
 		public SubTruckTweetPage(TruckTweet tweet){
-			Title = tweet.ScreenName;
+			Title = tweet.User.ScreenName;
 			NavigationPage.SetBackButtonTitle (this,"Back");
 
-			BindingContext = new TruckTweetsViewModel (){CurrentUser=tweet.ScreenName,CurrentUserID=tweet.UserID};
+			BindingContext = new TruckTweetsViewModel (){CurrentUser=tweet.User.ScreenName,CurrentUserID=tweet.User.Id };
 
 			var refresh = new ToolbarItem {
 				Command = ViewModel.RefreshCommand,
