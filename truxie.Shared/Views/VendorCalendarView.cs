@@ -103,12 +103,12 @@ namespace truxie.Shared
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
 
 			refreshList.ItemTapped +=  (sender, args) => {
-				if(refreshList.SelectedItem == null)
-					return;
-
-				var tweets = refreshList.SelectedItem as TruckTweet;
-
-				refreshList.SelectedItem = null;
+//				if(refreshList.SelectedItem == null)
+//					return;
+//
+//				var tweets = refreshList.SelectedItem as TruckTweet;
+//
+//				refreshList.SelectedItem = null;
 			};
 
 			Content = refreshList;

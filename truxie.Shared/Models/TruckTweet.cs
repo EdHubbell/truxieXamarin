@@ -8,7 +8,6 @@ namespace truxie.Shared
 		{
 		}
 
-
 		public ulong StatusID { get; set; }
 
 		public string ScreenName { get; set; }
@@ -58,7 +57,6 @@ namespace truxie.Shared
 			} else {
 				result = string.Format ("{0}s ", timeAgo.Second);
 			}
-
 
 			return result;
 		}

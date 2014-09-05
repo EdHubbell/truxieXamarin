@@ -4,8 +4,6 @@ namespace truxie.Shared
 {
 	public enum MenuType
 	{
-		About,
-		Blog,
 		NearbyNow, 
 		Local, 
 		Tweets, 
@@ -13,14 +11,17 @@ namespace truxie.Shared
 		UserTools, 
 		MyLocation
 	}
+
 	public class HomeMenuItem : BaseModel
 	{
 		public HomeMenuItem ()
 		{
-			MenuType = MenuType.About;
+			MenuType = MenuType.NearbyNow;
 		}
+	
 		public string Icon {get;set;}
 		public MenuType MenuType { get; set; }
+
 	}
 }
 

@@ -12,32 +12,25 @@ namespace truxie.Shared
 		public ObservableCollection<HomeMenuItem> MenuItems { get; set; }
 
 
-
 		public HomeViewModel ()
 		{
 			CanLoadMore = true;
 			Title = "nearby now";
 			MenuItems = new ObservableCollection<HomeMenuItem> ();
 			MenuItems.Add (new HomeMenuItem {
-				Id = 0, Title = "About", MenuType = MenuType.About,  Icon = "about.png"
+				Id = 0, Title = "nearby now", MenuType = MenuType.NearbyNow ,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 1, Title = "Blog", MenuType = MenuType.Blog, Icon = "blog.png"
+				Id = 1, Title = "tweets", MenuType = MenuType.Tweets,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 2, Title = "nearby now", MenuType = MenuType.NearbyNow ,  Icon = "twitternav.png"
+				Id = 2, Title = "calendar", MenuType = MenuType.Calendar,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 3, Title = "tweets", MenuType = MenuType.Tweets,  Icon = "twitternav.png"
+				Id = 3, Title = "user tools", MenuType = MenuType.UserTools,  Icon = "twitternav.png"
 			});
 			MenuItems.Add (new HomeMenuItem {
-				Id = 4, Title = "calendar", MenuType = MenuType.Calendar,  Icon = "twitternav.png"
-			});
-			MenuItems.Add (new HomeMenuItem {
-				Id = 5, Title = "user tools", MenuType = MenuType.UserTools,  Icon = "twitternav.png"
-			});
-			MenuItems.Add (new HomeMenuItem {
-				Id = 6, Title = "my location", MenuType = MenuType.MyLocation,  Icon = "twitternav.png"
+				Id = 4, Title = "my location", MenuType = MenuType.MyLocation,  Icon = "twitternav.png"
 			});
 		}
 

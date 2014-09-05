@@ -3,14 +3,14 @@ using Xamarin.Forms;
 
 namespace truxie.Shared
 {
-	public class TweetesCell:ViewCell
+	public class TweetCell:ViewCell
 	{
 		Label labelUserName;
 		Label labelTweet;
 		Label labelTime;
 		double paddingOffset = 5;
 
-		public TweetesCell ()
+		public TweetCell ()
 		{
 			labelUserName = new Label {
 				TextColor = Color.Black,

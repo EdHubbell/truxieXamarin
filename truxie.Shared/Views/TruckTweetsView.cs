@@ -34,7 +34,7 @@ namespace truxie.Shared
 				Message = "loading..."
 			};
 
-			refreshList.ItemTemplate = new DataTemplate (typeof(TweetesCell));
+			refreshList.ItemTemplate = new DataTemplate (typeof(TweetCell));
 			refreshList.HasUnevenRows = true;
 
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
@@ -107,7 +107,7 @@ namespace truxie.Shared
 				Message = "loading..."
 			};
 
-			refreshList.ItemTemplate = new DataTemplate (typeof(TweetesCell));
+			refreshList.ItemTemplate = new DataTemplate (typeof(TweetCell));
 			refreshList.HasUnevenRows = true;
 
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);

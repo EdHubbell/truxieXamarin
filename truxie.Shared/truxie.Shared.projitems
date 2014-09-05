@@ -15,7 +15,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListImageCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\Scott.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BlogFeedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TruckTweetsViewModel.cs" />
@@ -38,6 +37,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListTextCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)truxieApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\PullToRefreshListView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TweetesCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\VendorEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Vendor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\VendorLocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GeoJson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NearbyNowViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\NearbyNowView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TweetCell.cs" />
   </ItemGroup>
 </Project>

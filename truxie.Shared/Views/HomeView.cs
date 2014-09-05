@@ -26,7 +26,7 @@ namespace truxie.Shared
 			};
 			Detail = homeNav;
 
-			pages.Add (MenuType.About, homeNav);
+			pages.Add (MenuType.NearbyNow, homeNav);
 
 			master.PageSelectionChanged = (menuType) => {
 			
@@ -58,7 +58,7 @@ namespace truxie.Shared
 	{
 		public Action<MenuType> PageSelectionChanged;
 		private Page pageSelection;
-		private MenuType menuType = MenuType.About;
+		private MenuType menuType = MenuType.NearbyNow;
 
 		public Page PageSelection {
 			get{ return pageSelection; }
@@ -69,8 +69,10 @@ namespace truxie.Shared
 			}
 		}
 
-		private AboutView about;
-		private BlogView blog;
+//		private AboutView about;
+//		private BlogView blog;
+
+		private NearbyNowView nearbyNow;
 		private TruckTweetsView truckTweets;
 		private VendorCalendarView vendorCalendar;
 
@@ -137,27 +139,33 @@ namespace truxie.Shared
 //			listView.ItemTemplate = cell;
 
 			listView.ItemsSource = viewModel.MenuItems;
-			if (about == null)
-				about = new AboutView ();
+			if (nearbyNow == null)
+				nearbyNow = new NearbyNowView ();
 
-			PageSelection = about;
+			PageSelection = nearbyNow;
 
 			//Change to the correct page
 			listView.ItemSelected += (sender, args) => {
 				var menuItem = listView.SelectedItem as HomeMenuItem;
 				menuType = menuItem.MenuType;
 				switch (menuItem.MenuType) {
-				case MenuType.About:
-					if (about == null)
-						about = new AboutView ();
+//				case MenuType.About:
+//					if (about == null)
+//						about = new AboutView ();
+//
+//					PageSelection = about;
+//					break;
+//				case MenuType.Blog:
+//					if (blog == null)
+//						blog = new BlogView ();
+//						
+//					PageSelection = blog;
+//					break;
+				case MenuType.NearbyNow:
+					if (nearbyNow == null)
+						nearbyNow = new NearbyNowView ();
 
-					PageSelection = about;
-					break;
-				case MenuType.Blog:
-					if (blog == null)
-						blog = new BlogView ();
-						
-					PageSelection = blog;
+					PageSelection = nearbyNow;
 					break;
 				case MenuType.Tweets:
 					if (truckTweets == null)
