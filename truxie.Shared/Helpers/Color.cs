@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 
 #if __IOS__
 using MonoTouch.UIKit;
@@ -15,6 +16,10 @@ namespace truxie.Shared.Helpers
 		public static readonly Color Green = 0x77D065;
 		public static readonly Color Gray = 0x738182;
 		public static readonly Color LightGray = 0xB4BCBC;
+
+		public static readonly Xamarin.Forms.Color TruxieOrange = new Xamarin.Forms.Color(250, 176, 59);
+		public static readonly Xamarin.Forms.Color TruxieGray = new Xamarin.Forms.Color(176, 176, 176);
+		public static readonly Xamarin.Forms.Color TruxieBlack = new Xamarin.Forms.Color(31, 31, 31);
 
 		public double R, G, B;
 

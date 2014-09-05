@@ -46,5 +46,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Response.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\WebService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\VendorEventCell.cs" />
   </ItemGroup>
 </Project>

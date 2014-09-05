@@ -24,13 +24,8 @@ namespace truxie.Shared
 
 			ToolbarItems.Add (refresh);
 
-			var stack = new StackLayout {
-				Orientation = StackOrientation.Vertical,
-				Padding = new Thickness (0, 8, 0, 8)
-			};
-
 			var refreshList = new PullToRefreshListView {
-				RefreshCommand = ViewModel.DataLoadCommand,
+				RefreshCommand = ViewModel.RefreshCommand,
 				Message = "loading..."
 			};
 
@@ -39,8 +34,6 @@ namespace truxie.Shared
 
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
-
-			//NavigationPage.SetHasNavigationBar(this,true);
 
 			refreshList.ItemTapped += (sender, args) => {
 				if (refreshList.SelectedItem == null)
@@ -97,13 +90,8 @@ namespace truxie.Shared
 
 			ToolbarItems.Add (refresh);
 
-			var stack = new StackLayout {
-				Orientation = StackOrientation.Vertical,
-				Padding = new Thickness (0, 8, 0, 8)
-			};
-
 			refreshList = new PullToRefreshListView {
-				RefreshCommand = ViewModel.DataLoadCommand,
+				RefreshCommand = ViewModel.RefreshCommand,
 				Message = "loading..."
 			};
 

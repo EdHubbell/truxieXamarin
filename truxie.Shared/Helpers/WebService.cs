@@ -12,33 +12,6 @@ namespace truxie.Shared
 		{
 		}
 
-		string base_url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", 35.994033, -78.898619, 0, 20);
-
-		public void GetTweetsInitData (String userLat, String userLon, int start, int limit)
-		{
-			string url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
-			var httpReq = (HttpWebRequest)HttpWebRequest.Create (new Uri (url));
-
-			httpReq.BeginGetResponse ((ar) => {
-				int success = 0;
-				String msg = "Cannot connect to server";
-
-				try {
-					var request = (HttpWebRequest)ar.AsyncState;
-					using (var response = (HttpWebResponse)request.EndGetResponse (ar)) {                           
-
-						try {
-							var s = response.GetResponseStream ();
-
-						} catch (Exception e) {
-						}
-					}
-				} catch (Exception e) {
-				}
-
-			}, httpReq);
-		}
-
 		public async Task<StatusesResponse> GetCurrUserTweetsData (string currId, string currentUser)
 		{
 			string url = string.Format (@"http://api.truxie.com/api/v1/twitterSearch?_dc={0}&include_entities=false&result_type=recent&q={1}&count=20", currId, currentUser);
@@ -64,7 +37,6 @@ namespace truxie.Shared
 				var message = ex.Message;
 			}
 			return result;
-			//return res;
 		}
 
 		public async Task<VendorCalendarEntry[]> GetVendorCalendarEntryList (String userLat, String userLon, int page)
@@ -72,16 +44,14 @@ namespace truxie.Shared
 			string url = string.Format (@"http://truxie.com/api/v1/truckCalendarEntries?userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
 			var res = await PerformRequest (url, "", "GET");
 			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (res);
-			//return res;
 		}
 
 
-		public async Task<VendorEventsListResponse[]> GetNearbyVendorEventsList (String userLat, String userLon)
+		public async Task<VendorEvent[]> GetNearbyVendorEventList (String userLat, String userLon)
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
 			var res = await PerformRequest (url, "", "GET");
-			return JsonConvert.DeserializeObject<VendorEventsListResponse[]> (res);
-			//return res;
+			return JsonConvert.DeserializeObject<VendorEvent[]> (res);
 		}
 
 
@@ -104,11 +74,6 @@ namespace truxie.Shared
 
 			return await GetResponse (request);
 		}
-
-		//		protected virtual string BuildRequestUrl ()
-		//		{
-		//			return string url = BASE_URL;
-		//		}
 
 		private HttpWebRequest CreateRequest (string url, string method)
 		{

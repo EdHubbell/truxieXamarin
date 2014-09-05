@@ -22,7 +22,7 @@ namespace truxie.Shared
 			Master = master = new HomeMasterView (ViewModel);
 
 			var homeNav = new NavigationPage (master.PageSelection) {
-				Tint = Helpers.Color.DarkBlue.ToFormsColor ()
+				BarBackgroundColor = Color.FromRgb(250, 176, 59), BarTextColor = Color.White
 			};
 			Detail = homeNav;
 
@@ -35,9 +35,7 @@ namespace truxie.Shared
 					newPage = pages [menuType];
 				} else {
 					newPage = new NavigationPage (master.PageSelection) {
-						Tint = Helpers.Color.DarkBlue.ToFormsColor (),
-						BarBackgroundColor = Color.FromRgb(217,143,43), BarTextColor =Color.White
-
+						BarBackgroundColor = Color.FromRgb(250, 176, 59), BarTextColor = Color.White
 					};
 					newPage.BackgroundColor = Color.Olive;
 					pages.Add (menuType, newPage);

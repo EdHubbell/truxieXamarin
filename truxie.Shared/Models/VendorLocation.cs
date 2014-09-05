@@ -8,12 +8,14 @@ namespace truxie.Shared
 		{
 		}
 
+		[Newtonsoft.Json.JsonProperty ("_id")]
 		public string Id { get; set; }
-		public GeoJson GeoJson { get; set; }
-		public string LocName { get; set; }
 
-		//public string TruckId { get; set; }
-		//public string TruckName { get; set; }
+		[Newtonsoft.Json.JsonProperty ("geoJSON")]
+		public GeoJson GeoJson { get; set; }
+
+		[Newtonsoft.Json.JsonProperty ("locName")]
+		public string LocName { get; set; }
 
 	}
 }

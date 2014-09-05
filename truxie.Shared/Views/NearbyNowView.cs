@@ -25,17 +25,12 @@ namespace truxie.Shared
 
 			ToolbarItems.Add (refresh);
 
-			var stack = new StackLayout {
-				Orientation = StackOrientation.Vertical,
-				Padding = new Thickness (0, 8, 0, 8)
-			};
-
 			var refreshList = new PullToRefreshListView {
 				RefreshCommand = ViewModel.DataLoadCommand,
 				Message = "loading..."
 			};
 
-			refreshList.ItemTemplate = new DataTemplate (typeof(TweetCell));
+			refreshList.ItemTemplate = new DataTemplate (typeof(VendorEventCell));
 			refreshList.HasUnevenRows = true;
 
 			refreshList.SetBinding<NearbyNowViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
