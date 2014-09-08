@@ -6,6 +6,7 @@ obj
 bin
 test-results
 Debug
+samples
 
 # VS sometimes writes these for no apparent reason
 _UpgradeReport_Files
