@@ -54,5 +54,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Location\PositionEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Location\GeoLocator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\VendorEventsResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IMeasurement.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MeasurementManager.cs" />
   </ItemGroup>
 </Project>

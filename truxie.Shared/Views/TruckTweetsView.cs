@@ -54,7 +54,6 @@ namespace truxie.Shared
 				if (list.Count==ViewModel.CurItemNumber && list [list.Count - 1] == e.Item) {
 					ViewModel.DataLoadCommand.Execute (null);
 				}
-
 			};
 
 			Content = refreshList;

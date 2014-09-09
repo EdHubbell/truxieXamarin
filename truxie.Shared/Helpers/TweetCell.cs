@@ -8,6 +8,7 @@ namespace truxie.Shared
 		Label labelUserName;
 		Label labelTweet;
 		Label labelTime;
+		Image imageUser;
 		double paddingOffset = 5;
 
 		public TweetCell ()
@@ -32,7 +33,7 @@ namespace truxie.Shared
 			labelTweet.SetBinding (Label.TextProperty, "Text");
 			labelTweet.SizeChanged += labelTweet_HandleSizeChanged;
 
-			Image imageUser = new Image () {VerticalOptions = LayoutOptions.Start,
+			imageUser = new Image () {VerticalOptions = LayoutOptions.Start,
 				WidthRequest = 40, HeightRequest = 40
 			};
 			imageUser.SetBinding (Image.SourceProperty, "User.ProfileImageUrl");
@@ -49,6 +50,8 @@ namespace truxie.Shared
 			labelTime.SetBinding (Label.TextProperty, "DateAgo");
 
 			View = new StackLayout { 
+				VerticalOptions = LayoutOptions.FillAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
 				Padding = new Thickness (paddingOffset),
 				Orientation = StackOrientation.Horizontal,
 				Children = {
@@ -79,6 +82,8 @@ namespace truxie.Shared
 		void labelTweet_HandleSizeChanged (object sender, EventArgs e)
 		{
 			this.Height = labelTweet.Bounds.Top + labelTweet.Bounds.Height + paddingOffset*2;
+			this.View.HeightRequest = this.Height - paddingOffset;
+
 		}
 
 		void HandleTapped (object sender, EventArgs e)
@@ -90,6 +95,8 @@ namespace truxie.Shared
 		{
 			base.OnBindingContextChanged ();
 			var tweet = (TruckTweet)BindingContext;
+
+			this.Height = MeasurementManager.Measurement.MesureString (labelTweet.Text,12f,(float)(imageUser.WidthRequest+paddingOffset*3))+ paddingOffset*2+24;
 		}
 
 	}
