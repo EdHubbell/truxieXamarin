@@ -12,6 +12,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Location\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\ListImageCell.cs" />
@@ -47,5 +48,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\Response.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\WebService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helpers\VendorEventCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\IGeoLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\Position.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\PositionErrorEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\PositionEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location\GeoLocator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\VendorEventsResponse.cs" />
   </ItemGroup>
 </Project>

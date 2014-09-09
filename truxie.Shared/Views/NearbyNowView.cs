@@ -39,6 +39,13 @@ namespace truxie.Shared
 			//NavigationPage.SetHasNavigationBar(this,true);
 
 			Content = refreshList;
+
+			ViewModel.DisplayErrorAction+= viewModel_HandleDisplayErrorAction;
+		}
+
+		void viewModel_HandleDisplayErrorAction (string title, string message)
+		{
+			this.DisplayAlert (title, message, "Ok");
 		}
 
 		protected override void OnAppearing ()
@@ -46,8 +53,14 @@ namespace truxie.Shared
 			base.OnAppearing ();
 			if (ViewModel == null || !ViewModel.CanLoadMore || ViewModel.IsBusy)
 				return;
+			ViewModel.AppearingCommand.Execute (null);
+			//ViewModel.RefreshCommand.Execute (null);
+		}
 
-			ViewModel.RefreshCommand.Execute (null);
+		protected override void OnDisappearing ()
+		{
+			base.OnDisappearing ();
+			ViewModel.DisappearingCommand.Execute (null);
 		}
 	}
 

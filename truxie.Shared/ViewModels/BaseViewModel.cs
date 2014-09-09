@@ -115,6 +115,7 @@ namespace truxie.Shared
 
 			PropertyChanged (this, new PropertyChangedEventArgs (propertyName));
 		}
+
 	}
 }
 

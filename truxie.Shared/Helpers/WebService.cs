@@ -46,14 +46,20 @@ namespace truxie.Shared
 			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (res);
 		}
 
-
-		public async Task<VendorEvent[]> GetNearbyVendorEventList (String userLat, String userLon)
+		public async Task<VendorEventsResponse> GetNearbyVendorEventList (String userLat, String userLon)
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
 			var res = await PerformRequest (url, "", "GET");
-			return JsonConvert.DeserializeObject<VendorEvent[]> (res);
-		}
+			VendorEventsResponse response=null;
+			try {
+				VendorEvent[] array=JsonConvert.DeserializeObject<VendorEvent[]> (res);
+				response=new VendorEventsResponse{VendorEvents=array};
+			} catch (Exception) {
+				response =JsonConvert.DeserializeObject<VendorEventsResponse> (res);
+			}
 
+			return response;
+		}
 
 		protected Task<string> PerformRequest (string url, string method = "GET")
 		{
