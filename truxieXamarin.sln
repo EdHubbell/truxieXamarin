@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "truxie.WindowsPhone", "trux
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "truxie.Shared", "truxie.Shared\truxie.Shared.shproj", "{E5741059-AD4D-40DB-BFF0-A3D57E50B66D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{69A719CD-1F25-4C9E-BCAC-0ABBB0CE9772}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -89,6 +94,8 @@ Global
 		{E5B4A6E4-CAAA-4E33-BC65-4D8214905BB3}.Release|Mixed Platforms.Build.0 = Release|iPhoneSimulator
 		{E5B4A6E4-CAAA-4E33-BC65-4D8214905BB3}.Release|x86.ActiveCfg = Release|iPhoneSimulator
 		{E5B4A6E4-CAAA-4E33-BC65-4D8214905BB3}.Release|x86.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = truxie.iOS\truxie.iOS.csproj
