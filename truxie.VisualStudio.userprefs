@@ -1,39 +1,43 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="truxie.Shared/ViewModels/NearbyNowViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="truxie.Shared/Models/DateTimeConverter.cs">
     <Files>
-      <File FileName="truxie.Shared/Views/NearbyNowView.cs" Line="37" Column="37" />
-      <File FileName="truxie.Shared/ViewModels/NearbyNowViewModel.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/Helpers/WebService.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/Location/Position.cs" Line="3" Column="3" />
-      <File FileName="truxie.Shared/Location/PositionErrorEventArgs.cs" Line="2" Column="2" />
-      <File FileName="truxie.Shared/Location/PositionEventArgs.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/ViewModels/BaseViewModel.cs" Line="3" Column="3" />
-      <File FileName="truxie.iOS/Main.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/Models/VendorEvent.cs" Line="2" Column="2" />
-      <File FileName="truxie.Shared/Models/Vendor.cs" Line="1" Column="1" />
-      <File FileName="truxie.Shared/Models/TruckTweet.cs" Line="2" Column="2" />
-      <File FileName="truxie.Shared/Models/VendorEventsResponse.cs" Line="44" Column="44" />
-      <File FileName="truxie.Shared/Models/BaseModel.cs" Line="30" Column="30" />
+      <File FileName="truxie.Shared/Models/DateTimeConverter.cs" Line="3" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="truxie.Android" expanded="True" />
+          <Node name="truxie.iOS" expanded="True">
+            <Node name="References" expanded="True">
+              <Node name="From Packages" expanded="True" />
+            </Node>
+            <Node name="Packages" expanded="True" />
+          </Node>
+          <Node name="truxie.Shared" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="32" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="40" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="58" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="48" column="1" />
-      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="22" column="1" />
+      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Portable/WebService.cs" line="16" column="1" />
       <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Helpers/PullToRefreshListView.cs" line="34" column="1" />
+      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Helpers/PullToRefreshListView.cs" line="23" column="1" />
+      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Helpers/PullToRefreshListView.cs" line="24" column="1" />
+      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Helpers/PullToRefreshListView.cs" line="19" column="1" />
+      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Helpers/PullToRefreshListView.cs" line="15" column="1" />
       <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/ViewModels/TwittesViewModel.cs" line="91" column="83" />
       <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/ViewModels/TwittesViewModel.cs" line="72" column="1" />
       <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Views/TwittesView.cs" line="66" column="6" />
       <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Views/TwittesView.cs" line="63" column="1" />
-      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Portable/WebService.cs" line="50" column="19" />
-      <Breakpoint file="/Users/iSV/Documents/XAMARIN/Volodymyr/iOS/edhubbell/Source/truxie.Shared/Location/GeoLocator.cs" line="94" column="1" />
+      <Breakpoint file="/Development/xamarin/truxie.Forms-master/truxie.Portable/WebService.cs" line="31" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="truxie.Shared/Models/TruckTweet.cs" line="41" offsetX="466" offsetY="600" expression="ticks" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <DisabledProjects>
     <String>Hanselman.Android/truxie.Android.csproj</String>
   </DisabledProjects>
