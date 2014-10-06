@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using MonoTouch.UIKit;
-using truxie.Shared;
+using truxie.PCL;
 using truxie.iOS.Renderers;
 
 [assembly:ExportRendererAttribute(typeof(PullToRefreshListView), typeof(PullToRefreshListViewRenderer))]

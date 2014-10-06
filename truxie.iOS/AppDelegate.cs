@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
-using truxie.Shared;
+using truxie.PCL;
 
 namespace truxie.iOS
 {
@@ -35,7 +35,7 @@ namespace truxie.iOS
 					TextColor = UIColor.White
 				});
 			Forms.Init();
-			page = truxie.Shared.truxieApp.RootPage;
+			page = truxie.PCL.truxieApp.RootPage;
 			window.RootViewController =  page.CreateViewController ();
 			// If you have defined a root view controller, set it here:
 			// window.RootViewController = myViewController;

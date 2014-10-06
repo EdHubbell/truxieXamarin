@@ -1,5 +1,5 @@
 ﻿using System;
-using truxie.Shared;
+using truxie.PCL;
 using Android.Text;
 using Android.Widget;
 using Android.Graphics;

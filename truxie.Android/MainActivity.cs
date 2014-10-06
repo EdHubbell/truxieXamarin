@@ -8,7 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
-using truxie.Shared;
+using truxie.PCL; 
 
 namespace truxieAndroid
 {
@@ -23,7 +23,7 @@ namespace truxieAndroid
 			MeasurementManager.Measurement = new truxie.Android.MeasurementHelper ();
 			Forms.Init(this, bundle);
 
-			SetPage (truxie.Shared.truxieApp.RootPage);
+			SetPage (truxie.PCL.truxieApp.RootPage);
 		}
 	}
 }

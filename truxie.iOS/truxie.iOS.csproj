@@ -173,7 +173,6 @@
     <Compile Include="Bootstrap\MobileBootstrap.cs" />
     <Compile Include="MeasurementHelper.cs" />
   </ItemGroup>
-  <Import Project="..\truxie.Shared\truxie.Shared.projitems" Label="Shared" Condition="Exists('..\truxie.Shared\truxie.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.2.6243\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -184,5 +183,11 @@
   </Target>
   <ItemGroup>
     <Folder Include="Renderers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\truxie.PCL\truxie.PCL.csproj">
+      <Project>{A1BEF634-916A-4AF8-A62F-EE61161C12C1}</Project>
+      <Name>truxie.PCL</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
