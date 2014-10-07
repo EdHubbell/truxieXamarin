@@ -1,7 +1,7 @@
 # truxieXamarin
 
-This app is based on Hanselman.forms, which is a demo app from Xamarin.  
-There are many crumbs of that project left in this one.
+This app was initially built based on Hanselman.forms, which is a demo app from Xamarin & James Montemagno.  
+There are still some crumbs of that project left in this one.
 
 ## What is truxie?
 
