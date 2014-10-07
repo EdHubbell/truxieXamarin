@@ -7,7 +7,7 @@ namespace truxie.PCL
 {
 	public class TruckTweetsViewModel : BaseViewModel
 	{
-		WebService Service;
+		//WebService Service;
 
 		public ObservableCollection<TruckTweet> Items{ get; set; }
 
@@ -16,7 +16,7 @@ namespace truxie.PCL
 		public TruckTweetsViewModel ()
 		{
 			CurItemNumber = 0;
-			Service = new WebService ();
+			//Service = new WebService ();
 			Title = "truck tweets";
 			Icon = "slideout.png";
 			Items = new ObservableCollection<TruckTweet> ();
@@ -50,17 +50,18 @@ namespace truxie.PCL
 			}
 
 			//await Task.Run(()=>{ Service.GetTweetsData("35.994033", "-78.898619", 0, 20); });
+
 			if (string.IsNullOrEmpty (CurrentUser) && string.IsNullOrEmpty (CurrentUserID)) {
-				var res = await Service.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
+				var res = await WebService.GetTweetsData ("35.994033", "-78.898619", CurItemNumber, 20);
 				foreach (var item in res) {
 					Items.Add (item);
 				}
-			} else {
-				var res2 = await Service.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
-				if(res2!=null)
-				foreach (var item in res2.Statuses) {
-						Items.Add (item);
-				}
+//			} else {
+//				var res2 = await WebService.GetCurrUserTweetsData (CurrentUserID, CurrentUser);
+//				if(res2!=null)
+//				foreach (var item in res2.Statuses) {
+//						Items.Add (item);
+//				}
 			}
 
 			CurItemNumber += 20;

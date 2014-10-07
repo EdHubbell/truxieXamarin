@@ -60,7 +60,7 @@ namespace truxie.PCL
 		protected override void OnDisappearing ()
 		{
 			base.OnDisappearing ();
-			ViewModel.DisappearingCommand.Execute (null);
+			//ViewModel.DisappearingCommand.Execute (null);
 		}
 	}
 

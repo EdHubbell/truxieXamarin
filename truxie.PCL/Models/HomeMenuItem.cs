@@ -7,7 +7,8 @@ namespace truxie.PCL
 		NearbyNow, 
 		Local, 
 		Tweets, 
-		Calendar 
+		Calendar,
+		CalendarXaml 
 	}
 
 	public class HomeMenuItem : BaseModel

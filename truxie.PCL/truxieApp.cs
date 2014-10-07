@@ -11,5 +11,6 @@ namespace truxie.PCL
 			get { return homeView ?? (homeView = new HomeView ()); }
 		}
 	}
-}
 
+
+}

@@ -29,6 +29,9 @@ namespace truxie.PCL
 			MenuItems.Add (new HomeMenuItem {
 				Id = 3, Title = "calendar", MenuType = MenuType.Calendar,  Icon = "twitternav.png"
 			});
+			MenuItems.Add (new HomeMenuItem {
+				Id = 4, Title = "calendarXaml", MenuType = MenuType.CalendarXaml,  Icon = "twitternav.png"
+			});
 		}
 
 	}

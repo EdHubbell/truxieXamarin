@@ -9,15 +9,15 @@ namespace truxie.PCL
 	{
 		public event Action<string,string> DisplayErrorAction;
 
-		private readonly IGeoLocator location;
-		WebService Service;
+		//private readonly IGeoLocator location;
+		//WebService Service;
 
 		public ObservableCollection<VendorEvent> Items{ get; set; }
 
 		public NearbyNowViewModel ()
 		{
-			this.location = new GeoLocator ();
-			Service = new WebService ();
+			//this.location = new GeoLocator ();
+			//Service = new WebService ();
 			Title = "nearby now";
 			Icon = "slideout.png";
 			Items = new ObservableCollection<VendorEvent> ();
@@ -71,14 +71,14 @@ namespace truxie.PCL
 
 		private  void ExecuteAppearingCommand ()
 		{
-			this.location.PositionChanged += this.OnPositionChanged;
-			this.location.StartListening (60000, 50, true);
+//			this.location.PositionChanged += this.OnPositionChanged;
+//			this.location.StartListening (60000, 50, true);
 		}
 
 		private void ExecuteDisappearingCommand ()
 		{
-			this.location.PositionChanged -= this.OnPositionChanged;
-			this.location.StopListening ();
+//			this.location.PositionChanged -= this.OnPositionChanged;
+//			this.location.StopListening ();
 		}
 
 		private async Task ExecuteDataLoadCommand ()
@@ -91,16 +91,16 @@ namespace truxie.PCL
 			// This list is so short that we should always just do a clear and fill.  No refreshing, no scrolling down.
 			Items.Clear ();
 
-			var res = await Service.GetNearbyVendorEventList (UserLatitude.ToString(), UserLongitude.ToString());//("35.994033", "-78.898619");
+			//var res = await Service.GetNearbyVendorEventList (UserLatitude.ToString(), UserLongitude.ToString());//("35.994033", "-78.898619");
 
-			if (res.HasError) {
-				if (DisplayErrorAction != null)
-					DisplayErrorAction ("Load VendorEvents", res.Error);
-			} else {
-				foreach (var item in res.VendorEvents) {
-					Items.Add (item);
-				}
-			}
+//			if (res.HasError) {
+//				if (DisplayErrorAction != null)
+//					DisplayErrorAction ("Load VendorEvents", res.Error);
+//			} else {
+//				foreach (var item in res.VendorEvents) {
+//					Items.Add (item);
+//				}
+//			}
 			IsBusy = false;
 		}
 

@@ -73,6 +73,7 @@ namespace truxie.PCL
 		private NearbyNowView nearbyNow;
 		private TruckTweetsView truckTweets;
 		private VendorCalendarView vendorCalendar;
+		private CalendarEntriesPage vendorCalendarXaml;
 
 		public HomeMasterView (HomeViewModel viewModel)
 		{
@@ -167,6 +168,12 @@ namespace truxie.PCL
 					PageSelection = vendorCalendar;
 					break;
 
+				case MenuType.CalendarXaml:
+					if (vendorCalendarXaml == null)
+						vendorCalendarXaml = new CalendarEntriesPage();
+
+					PageSelection = vendorCalendarXaml;
+					break;
 				}
 			};
 

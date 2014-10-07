@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "truxie.iOS", "truxie.iOS\tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "truxie.WindowsPhone", "truxie.WindowsPhone\truxie.WindowsPhone.csproj", "{93E46D0B-295C-4F17-9E8C-D4176C5ACD2B}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "truxie.Shared", "truxie.Shared\truxie.Shared.shproj", "{E5741059-AD4D-40DB-BFF0-A3D57E50B66D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{69A719CD-1F25-4C9E-BCAC-0ABBB0CE9772}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md

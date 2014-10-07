@@ -157,14 +157,14 @@ namespace truxie.Android
 			// aapt resource value: 0x7f01006c
 			public const int activityChooserViewStyle = 2130772076;
 			
-			// aapt resource value: 0x7f010073
-			public const int adSize = 2130772083;
+			// aapt resource value: 0x7f01006e
+			public const int adSize = 2130772078;
 			
-			// aapt resource value: 0x7f010074
-			public const int adSizes = 2130772084;
+			// aapt resource value: 0x7f01006f
+			public const int adSizes = 2130772079;
 			
-			// aapt resource value: 0x7f010075
-			public const int adUnitId = 2130772085;
+			// aapt resource value: 0x7f010070
+			public const int adUnitId = 2130772080;
 			
 			// aapt resource value: 0x7f01002f
 			public const int background = 2130772015;
@@ -181,32 +181,32 @@ namespace truxie.Android
 			// aapt resource value: 0x7f010017
 			public const int buttonBarStyle = 2130771991;
 			
-			// aapt resource value: 0x7f01008b
-			public const int buyButtonAppearance = 2130772107;
+			// aapt resource value: 0x7f010086
+			public const int buyButtonAppearance = 2130772102;
 			
-			// aapt resource value: 0x7f010088
-			public const int buyButtonHeight = 2130772104;
+			// aapt resource value: 0x7f010083
+			public const int buyButtonHeight = 2130772099;
 			
-			// aapt resource value: 0x7f01008a
-			public const int buyButtonText = 2130772106;
+			// aapt resource value: 0x7f010085
+			public const int buyButtonText = 2130772101;
 			
-			// aapt resource value: 0x7f010089
-			public const int buyButtonWidth = 2130772105;
+			// aapt resource value: 0x7f010084
+			public const int buyButtonWidth = 2130772100;
 			
-			// aapt resource value: 0x7f010077
-			public const int cameraBearing = 2130772087;
+			// aapt resource value: 0x7f010072
+			public const int cameraBearing = 2130772082;
 			
-			// aapt resource value: 0x7f010078
-			public const int cameraTargetLat = 2130772088;
+			// aapt resource value: 0x7f010073
+			public const int cameraTargetLat = 2130772083;
 			
-			// aapt resource value: 0x7f010079
-			public const int cameraTargetLng = 2130772089;
+			// aapt resource value: 0x7f010074
+			public const int cameraTargetLng = 2130772084;
 			
-			// aapt resource value: 0x7f01007a
-			public const int cameraTilt = 2130772090;
+			// aapt resource value: 0x7f010075
+			public const int cameraTilt = 2130772085;
 			
-			// aapt resource value: 0x7f01007b
-			public const int cameraZoom = 2130772091;
+			// aapt resource value: 0x7f010076
+			public const int cameraZoom = 2130772086;
 			
 			// aapt resource value: 0x7f010032
 			public const int customNavigationLayout = 2130772018;
@@ -235,20 +235,20 @@ namespace truxie.Android
 			// aapt resource value: 0x7f010048
 			public const int dropdownListPreferredItemHeight = 2130772040;
 			
-			// aapt resource value: 0x7f010085
-			public const int environment = 2130772101;
+			// aapt resource value: 0x7f010080
+			public const int environment = 2130772096;
 			
 			// aapt resource value: 0x7f01006b
 			public const int expandActivityOverflowButtonDrawable = 2130772075;
 			
-			// aapt resource value: 0x7f01006e
-			public const int externalRouteEnabledDrawable = 2130772078;
+			// aapt resource value: 0x7f01008e
+			public const int externalRouteEnabledDrawable = 2130772110;
 			
-			// aapt resource value: 0x7f010087
-			public const int fragmentMode = 2130772103;
+			// aapt resource value: 0x7f010082
+			public const int fragmentMode = 2130772098;
 			
-			// aapt resource value: 0x7f010086
-			public const int fragmentStyle = 2130772102;
+			// aapt resource value: 0x7f010081
+			public const int fragmentStyle = 2130772097;
 			
 			// aapt resource value: 0x7f010026
 			public const int height = 2130772006;
@@ -301,41 +301,41 @@ namespace truxie.Android
 			// aapt resource value: 0x7f01002d
 			public const int logo = 2130772013;
 			
-			// aapt resource value: 0x7f010076
-			public const int mapType = 2130772086;
+			// aapt resource value: 0x7f010071
+			public const int mapType = 2130772081;
 			
-			// aapt resource value: 0x7f01008e
-			public const int maskedWalletDetailsBackground = 2130772110;
+			// aapt resource value: 0x7f010089
+			public const int maskedWalletDetailsBackground = 2130772105;
 			
-			// aapt resource value: 0x7f010090
-			public const int maskedWalletDetailsButtonBackground = 2130772112;
+			// aapt resource value: 0x7f01008b
+			public const int maskedWalletDetailsButtonBackground = 2130772107;
 			
-			// aapt resource value: 0x7f01008f
-			public const int maskedWalletDetailsButtonTextAppearance = 2130772111;
+			// aapt resource value: 0x7f01008a
+			public const int maskedWalletDetailsButtonTextAppearance = 2130772106;
+			
+			// aapt resource value: 0x7f010088
+			public const int maskedWalletDetailsHeaderTextAppearance = 2130772104;
 			
 			// aapt resource value: 0x7f01008d
-			public const int maskedWalletDetailsHeaderTextAppearance = 2130772109;
-			
-			// aapt resource value: 0x7f010092
-			public const int maskedWalletDetailsLogoImageType = 2130772114;
-			
-			// aapt resource value: 0x7f010091
-			public const int maskedWalletDetailsLogoTextColor = 2130772113;
+			public const int maskedWalletDetailsLogoImageType = 2130772109;
 			
 			// aapt resource value: 0x7f01008c
-			public const int maskedWalletDetailsTextAppearance = 2130772108;
+			public const int maskedWalletDetailsLogoTextColor = 2130772108;
 			
-			// aapt resource value: 0x7f01006f
-			public const int mediaRouteButtonStyle = 2130772079;
+			// aapt resource value: 0x7f010087
+			public const int maskedWalletDetailsTextAppearance = 2130772103;
 			
-			// aapt resource value: 0x7f010071
-			public const int mediaRouteConnectingDrawable = 2130772081;
+			// aapt resource value: 0x7f01008f
+			public const int mediaRouteButtonStyle = 2130772111;
 			
-			// aapt resource value: 0x7f010070
-			public const int mediaRouteOffDrawable = 2130772080;
+			// aapt resource value: 0x7f010091
+			public const int mediaRouteConnectingDrawable = 2130772113;
 			
-			// aapt resource value: 0x7f010072
-			public const int mediaRouteOnDrawable = 2130772082;
+			// aapt resource value: 0x7f010090
+			public const int mediaRouteOffDrawable = 2130772112;
+			
+			// aapt resource value: 0x7f010092
+			public const int mediaRouteOnDrawable = 2130772114;
 			
 			// aapt resource value: 0x7f010027
 			public const int navigationMode = 2130772007;
@@ -451,8 +451,8 @@ namespace truxie.Android
 			// aapt resource value: 0x7f010068
 			public const int textColorSearchUrl = 2130772072;
 			
-			// aapt resource value: 0x7f010084
-			public const int theme = 2130772100;
+			// aapt resource value: 0x7f01007f
+			public const int theme = 2130772095;
 			
 			// aapt resource value: 0x7f010025
 			public const int title = 2130772005;
@@ -460,26 +460,26 @@ namespace truxie.Android
 			// aapt resource value: 0x7f01002a
 			public const int titleTextStyle = 2130772010;
 			
+			// aapt resource value: 0x7f010077
+			public const int uiCompass = 2130772087;
+			
+			// aapt resource value: 0x7f010078
+			public const int uiRotateGestures = 2130772088;
+			
+			// aapt resource value: 0x7f010079
+			public const int uiScrollGestures = 2130772089;
+			
+			// aapt resource value: 0x7f01007a
+			public const int uiTiltGestures = 2130772090;
+			
+			// aapt resource value: 0x7f01007b
+			public const int uiZoomControls = 2130772091;
+			
 			// aapt resource value: 0x7f01007c
-			public const int uiCompass = 2130772092;
+			public const int uiZoomGestures = 2130772092;
 			
 			// aapt resource value: 0x7f01007d
-			public const int uiRotateGestures = 2130772093;
-			
-			// aapt resource value: 0x7f01007e
-			public const int uiScrollGestures = 2130772094;
-			
-			// aapt resource value: 0x7f01007f
-			public const int uiTiltGestures = 2130772095;
-			
-			// aapt resource value: 0x7f010080
-			public const int uiZoomControls = 2130772096;
-			
-			// aapt resource value: 0x7f010081
-			public const int uiZoomGestures = 2130772097;
-			
-			// aapt resource value: 0x7f010082
-			public const int useViewLifecycle = 2130772098;
+			public const int useViewLifecycle = 2130772093;
 			
 			// aapt resource value: 0x7f010000
 			public const int windowActionBar = 2130771968;
@@ -502,8 +502,8 @@ namespace truxie.Android
 			// aapt resource value: 0x7f010002
 			public const int windowSplitActionBar = 2130771970;
 			
-			// aapt resource value: 0x7f010083
-			public const int zOrderOnTop = 2130772099;
+			// aapt resource value: 0x7f01007e
+			public const int zOrderOnTop = 2130772094;
 			
 			static Attribute()
 			{
@@ -1614,104 +1614,104 @@ namespace truxie.Android
 			// aapt resource value: 0x7f0a0030
 			public const int app_name = 2131361840;
 			
-			// aapt resource value: 0x7f0a001e
-			public const int common_google_play_services_enable_button = 2131361822;
-			
-			// aapt resource value: 0x7f0a001d
-			public const int common_google_play_services_enable_text = 2131361821;
-			
-			// aapt resource value: 0x7f0a001c
-			public const int common_google_play_services_enable_title = 2131361820;
+			// aapt resource value: 0x7f0a0018
+			public const int common_google_play_services_enable_button = 2131361816;
 			
 			// aapt resource value: 0x7f0a0017
-			public const int common_google_play_services_error_notification_requested_by_msg = 2131361815;
-			
-			// aapt resource value: 0x7f0a001b
-			public const int common_google_play_services_install_button = 2131361819;
-			
-			// aapt resource value: 0x7f0a0019
-			public const int common_google_play_services_install_text_phone = 2131361817;
-			
-			// aapt resource value: 0x7f0a001a
-			public const int common_google_play_services_install_text_tablet = 2131361818;
-			
-			// aapt resource value: 0x7f0a0018
-			public const int common_google_play_services_install_title = 2131361816;
-			
-			// aapt resource value: 0x7f0a0024
-			public const int common_google_play_services_invalid_account_text = 2131361828;
-			
-			// aapt resource value: 0x7f0a0023
-			public const int common_google_play_services_invalid_account_title = 2131361827;
+			public const int common_google_play_services_enable_text = 2131361815;
 			
 			// aapt resource value: 0x7f0a0016
-			public const int common_google_play_services_needs_enabling_title = 2131361814;
+			public const int common_google_play_services_enable_title = 2131361814;
 			
-			// aapt resource value: 0x7f0a0022
-			public const int common_google_play_services_network_error_text = 2131361826;
-			
-			// aapt resource value: 0x7f0a0021
-			public const int common_google_play_services_network_error_title = 2131361825;
-			
-			// aapt resource value: 0x7f0a0014
-			public const int common_google_play_services_notification_needs_installation_title = 2131361812;
+			// aapt resource value: 0x7f0a0011
+			public const int common_google_play_services_error_notification_requested_by_msg = 2131361809;
 			
 			// aapt resource value: 0x7f0a0015
-			public const int common_google_play_services_notification_needs_update_title = 2131361813;
+			public const int common_google_play_services_install_button = 2131361813;
 			
 			// aapt resource value: 0x7f0a0013
-			public const int common_google_play_services_notification_ticker = 2131361811;
+			public const int common_google_play_services_install_text_phone = 2131361811;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int common_google_play_services_unknown_issue = 2131361829;
+			// aapt resource value: 0x7f0a0014
+			public const int common_google_play_services_install_text_tablet = 2131361812;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int common_google_play_services_unsupported_date_text = 2131361832;
+			// aapt resource value: 0x7f0a0012
+			public const int common_google_play_services_install_title = 2131361810;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int common_google_play_services_unsupported_text = 2131361831;
+			// aapt resource value: 0x7f0a001e
+			public const int common_google_play_services_invalid_account_text = 2131361822;
 			
-			// aapt resource value: 0x7f0a0026
-			public const int common_google_play_services_unsupported_title = 2131361830;
+			// aapt resource value: 0x7f0a001d
+			public const int common_google_play_services_invalid_account_title = 2131361821;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int common_google_play_services_update_button = 2131361833;
+			// aapt resource value: 0x7f0a0010
+			public const int common_google_play_services_needs_enabling_title = 2131361808;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int common_google_play_services_update_text = 2131361824;
+			// aapt resource value: 0x7f0a001c
+			public const int common_google_play_services_network_error_text = 2131361820;
+			
+			// aapt resource value: 0x7f0a001b
+			public const int common_google_play_services_network_error_title = 2131361819;
+			
+			// aapt resource value: 0x7f0a000e
+			public const int common_google_play_services_notification_needs_installation_title = 2131361806;
+			
+			// aapt resource value: 0x7f0a000f
+			public const int common_google_play_services_notification_needs_update_title = 2131361807;
+			
+			// aapt resource value: 0x7f0a000d
+			public const int common_google_play_services_notification_ticker = 2131361805;
 			
 			// aapt resource value: 0x7f0a001f
-			public const int common_google_play_services_update_title = 2131361823;
+			public const int common_google_play_services_unknown_issue = 2131361823;
 			
-			// aapt resource value: 0x7f0a002a
-			public const int common_signin_button_text = 2131361834;
+			// aapt resource value: 0x7f0a0022
+			public const int common_google_play_services_unsupported_date_text = 2131361826;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int common_signin_button_text_long = 2131361835;
+			// aapt resource value: 0x7f0a0021
+			public const int common_google_play_services_unsupported_text = 2131361825;
+			
+			// aapt resource value: 0x7f0a0020
+			public const int common_google_play_services_unsupported_title = 2131361824;
+			
+			// aapt resource value: 0x7f0a0023
+			public const int common_google_play_services_update_button = 2131361827;
+			
+			// aapt resource value: 0x7f0a001a
+			public const int common_google_play_services_update_text = 2131361818;
+			
+			// aapt resource value: 0x7f0a0019
+			public const int common_google_play_services_update_title = 2131361817;
+			
+			// aapt resource value: 0x7f0a0024
+			public const int common_signin_button_text = 2131361828;
+			
+			// aapt resource value: 0x7f0a0025
+			public const int common_signin_button_text_long = 2131361829;
 			
 			// aapt resource value: 0x7f0a002f
 			public const int hello = 2131361839;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int mr_media_route_button_content_description = 2131361807;
+			// aapt resource value: 0x7f0a0029
+			public const int mr_media_route_button_content_description = 2131361833;
 			
-			// aapt resource value: 0x7f0a0011
-			public const int mr_media_route_chooser_searching = 2131361809;
+			// aapt resource value: 0x7f0a002b
+			public const int mr_media_route_chooser_searching = 2131361835;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int mr_media_route_chooser_title = 2131361808;
-			
-			// aapt resource value: 0x7f0a0012
-			public const int mr_media_route_controller_disconnect = 2131361810;
-			
-			// aapt resource value: 0x7f0a000d
-			public const int mr_system_route_name = 2131361805;
-			
-			// aapt resource value: 0x7f0a000e
-			public const int mr_user_route_category_name = 2131361806;
+			// aapt resource value: 0x7f0a002a
+			public const int mr_media_route_chooser_title = 2131361834;
 			
 			// aapt resource value: 0x7f0a002c
-			public const int wallet_buy_button_place_holder = 2131361836;
+			public const int mr_media_route_controller_disconnect = 2131361836;
+			
+			// aapt resource value: 0x7f0a0027
+			public const int mr_system_route_name = 2131361831;
+			
+			// aapt resource value: 0x7f0a0028
+			public const int mr_user_route_category_name = 2131361832;
+			
+			// aapt resource value: 0x7f0a0026
+			public const int wallet_buy_button_place_holder = 2131361830;
 			
 			static String()
 			{
@@ -1921,26 +1921,26 @@ namespace truxie.Android
 			// aapt resource value: 0x7f0b007f
 			public const int Theme_Base_Light = 2131427455;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int Theme_IAPTheme = 2131427471;
-			
-			// aapt resource value: 0x7f0b008d
-			public const int Theme_MediaRouter = 2131427469;
-			
-			// aapt resource value: 0x7f0b008e
-			public const int Theme_MediaRouter_Light = 2131427470;
+			// aapt resource value: 0x7f0b008b
+			public const int Theme_IAPTheme = 2131427467;
 			
 			// aapt resource value: 0x7f0b0092
-			public const int WalletFragmentDefaultButtonTextAppearance = 2131427474;
-			
-			// aapt resource value: 0x7f0b0091
-			public const int WalletFragmentDefaultDetailsHeaderTextAppearance = 2131427473;
-			
-			// aapt resource value: 0x7f0b0090
-			public const int WalletFragmentDefaultDetailsTextAppearance = 2131427472;
+			public const int Theme_MediaRouter = 2131427474;
 			
 			// aapt resource value: 0x7f0b0093
-			public const int WalletFragmentDefaultStyle = 2131427475;
+			public const int Theme_MediaRouter_Light = 2131427475;
+			
+			// aapt resource value: 0x7f0b008e
+			public const int WalletFragmentDefaultButtonTextAppearance = 2131427470;
+			
+			// aapt resource value: 0x7f0b008d
+			public const int WalletFragmentDefaultDetailsHeaderTextAppearance = 2131427469;
+			
+			// aapt resource value: 0x7f0b008c
+			public const int WalletFragmentDefaultDetailsTextAppearance = 2131427468;
+			
+			// aapt resource value: 0x7f0b008f
+			public const int WalletFragmentDefaultStyle = 2131427471;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int Widget_AppCompat_ActionBar = 2131427328;
@@ -2176,11 +2176,11 @@ namespace truxie.Android
 			// aapt resource value: 0x7f0b0022
 			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427362;
 			
-			// aapt resource value: 0x7f0b008c
-			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131427468;
+			// aapt resource value: 0x7f0b0091
+			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131427473;
 			
-			// aapt resource value: 0x7f0b008b
-			public const int Widget_MediaRouter_MediaRouteButton = 2131427467;
+			// aapt resource value: 0x7f0b0090
+			public const int Widget_MediaRouter_MediaRouteButton = 2131427472;
 			
 			static Style()
 			{
@@ -2357,9 +2357,9 @@ namespace truxie.Android
 			
 			public static int[] AdsAttrs = new int[]
 			{
-					2130772083,
-					2130772084,
-					2130772085};
+					2130772078,
+					2130772079,
+					2130772080};
 			
 			// aapt resource value: 0
 			public const int AdsAttrs_adSize = 0;
@@ -2394,6 +2394,11 @@ namespace truxie.Android
 			
 			public static int[] MapAttrs = new int[]
 			{
+					2130772081,
+					2130772082,
+					2130772083,
+					2130772084,
+					2130772085,
 					2130772086,
 					2130772087,
 					2130772088,
@@ -2402,12 +2407,7 @@ namespace truxie.Android
 					2130772091,
 					2130772092,
 					2130772093,
-					2130772094,
-					2130772095,
-					2130772096,
-					2130772097,
-					2130772098,
-					2130772099};
+					2130772094};
 			
 			// aapt resource value: 1
 			public const int MapAttrs_cameraBearing = 1;
@@ -2455,7 +2455,7 @@ namespace truxie.Android
 			{
 					16843071,
 					16843072,
-					2130772078};
+					2130772110};
 			
 			// aapt resource value: 1
 			public const int MediaRouteButton_android_minHeight = 1;
@@ -2709,10 +2709,10 @@ namespace truxie.Android
 			
 			public static int[] WalletFragmentOptions = new int[]
 			{
-					2130772100,
-					2130772101,
-					2130772102,
-					2130772103};
+					2130772095,
+					2130772096,
+					2130772097,
+					2130772098};
 			
 			// aapt resource value: 1
 			public const int WalletFragmentOptions_environment = 1;
@@ -2728,17 +2728,17 @@ namespace truxie.Android
 			
 			public static int[] WalletFragmentStyle = new int[]
 			{
+					2130772099,
+					2130772100,
+					2130772101,
+					2130772102,
+					2130772103,
 					2130772104,
 					2130772105,
 					2130772106,
 					2130772107,
 					2130772108,
-					2130772109,
-					2130772110,
-					2130772111,
-					2130772112,
-					2130772113,
-					2130772114};
+					2130772109};
 			
 			// aapt resource value: 3
 			public const int WalletFragmentStyle_buyButtonAppearance = 3;

@@ -98,6 +98,7 @@ namespace truxie.PCL
 					}
 				};
 			});
+
 			//refreshList.RowHeight = 100;
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.IsRefreshingProperty, vm => vm.IsBusy);
 			refreshList.SetBinding<TruckTweetsViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);

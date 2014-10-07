@@ -72,7 +72,13 @@
     <Compile Include="Views\TruckTweetsView.cs" />
     <Compile Include="Views\VendorCalendarView.cs" />
     <Compile Include="Views\WebsiteView.cs" />
-    <Compile Include="truxiePCL.cs" />
+    <Compile Include="truxieApp.cs" />
+    <Compile Include="XamlViews\CalendarEntryView.xaml.cs">
+      <DependentUpon>CalendarEntryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XamlPages\CalendarEntriesPage.xaml.cs">
+      <DependentUpon>CalendarEntriesPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -83,6 +89,8 @@
     <Folder Include="Location\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
+    <Folder Include="XamlPages\" />
+    <Folder Include="XamlViews\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Build.Tasks">
@@ -112,8 +120,22 @@
     <Reference Include="Acr.XamForms.Mobile">
       <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.Mobile.dll</HintPath>
     </Reference>
+    <Reference Include="ExifLib">
+      <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Labs">
+      <HintPath>..\packages\Xamarin.Forms.Labs.1.1.0\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\Xamarin.Forms.Labs.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XamlViews\CalendarEntryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XamlPages\CalendarEntriesPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
