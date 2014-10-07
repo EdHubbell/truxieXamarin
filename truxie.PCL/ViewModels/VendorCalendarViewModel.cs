@@ -7,7 +7,6 @@ namespace truxie.PCL
 {
 	public class VendorCalendarViewModel : BaseViewModel
 	{
-		//WebService Service;
 
 		public ObservableCollection<VendorCalendarEntry> Items{ get; set; }
 
@@ -63,13 +62,13 @@ namespace truxie.PCL
 
 			IsBusy = true;
 
-		//	var res = await Service.GetVendorCalendarEntryList ("35.994033", "-78.898619", CurrentPage);
+			var res = await WebService.GetVendorCalendarEntryList ("35.994033", "-78.898619", CurrentPage);
 
 			CurrentPage += 1;
 
-//			foreach (var item in res) {
-//				Items.Add (item);
-//			}
+			foreach (var item in res) {
+				Items.Add (item);
+			}
 
 			IsBusy = false;
 		}

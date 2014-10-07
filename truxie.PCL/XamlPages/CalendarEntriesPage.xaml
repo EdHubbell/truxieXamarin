@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:truxie.PCL;assembly=XamlPages.CalendarEntriesPage"
 		x:Class="truxie.PCL.CalendarEntriesPage" 
-		Title="CalendarXaml">
+		Title="CalendarXaml"
+		>
 
 
 	<ContentPage.Padding>
@@ -12,5 +14,35 @@
 	<ContentPage.ToolbarItems>
  			<ToolbarItem x:Name="btnRefresh" Icon="refresh.png" />    
 	</ContentPage.ToolbarItems>
+
+	<ListView x:Name="calendarListView" 
+			RowHeight="60" 
+			ItemsSource="{x:Static local:Items.All}">
+		  <ListView.ItemTemplate>
+		      <DataTemplate>
+		        <ViewCell>
+		          <ViewCell.View>
+		            <StackLayout Orientation="Horizontal">
+
+		              <Image Source="{Binding ImageUri}"
+		                     WidthRequest="40"
+		                     HeightRequest="40" />
+
+		              <StackLayout Orientation="Vertical"
+		                           HorizontalOptions="StartAndExpand">
+
+		                <Label Text="{Binding VendorName}"
+		                       HorizontalOptions="FillAndExpand" />
+
+		                <Label Text="{Binding Location}" />
+
+		              </StackLayout>
+		            </StackLayout>
+		          </ViewCell.View>
+		        </ViewCell>
+		      </DataTemplate>
+		    </ListView.ItemTemplate>
+    	</ListView>
+
 
 </ContentPage>
