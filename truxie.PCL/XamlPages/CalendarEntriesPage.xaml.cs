@@ -19,6 +19,8 @@ namespace truxie.PCL
 
 			btnRefresh.Activated  += OnRefreshActivated;
 
+			Items = new ObservableCollection<VendorCalendarEntry>();
+
 		}
 
 		async void OnRefreshActivated(object sender, EventArgs args)
@@ -37,8 +39,12 @@ namespace truxie.PCL
 				Items.Add (item);
 			}
 
-			IsBusy = false;
+			await DisplayAlert(Items.Count.ToString() + " Items",
+				"And yet none of them render",
+				"OK");
+				
 
+			IsBusy = false;
 
 		}
 	}

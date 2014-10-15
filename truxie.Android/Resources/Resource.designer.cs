@@ -1158,16 +1158,13 @@ namespace truxie.Android
 			public const int refresh = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int scott = 2130837646;
+			public const int slideout = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int slideout = 2130837647;
+			public const int twitter = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int twitter = 2130837648;
-			
-			// aapt resource value: 0x7f020091
-			public const int twitternav = 2130837649;
+			public const int twitternav = 2130837648;
 			
 			static Drawable()
 			{
