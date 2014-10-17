@@ -21,6 +21,8 @@ namespace truxie.PCL
 
 			Items = new ObservableCollection<VendorCalendarEntry>();
 
+			this.BindingContext = Items;
+
 		}
 
 		async void OnRefreshActivated(object sender, EventArgs args)

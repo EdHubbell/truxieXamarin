@@ -4,19 +4,19 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Acr.XamForms.ViewModels;
 
 namespace truxie.PCL
 {
-	public class HomeViewModel : BaseViewModel
+	public class HomeViewModel : ViewModel
 	{
 		public ObservableCollection<HomeMenuItem> MenuItems { get; set; }
 
-
 		public HomeViewModel ()
 		{
-			CanLoadMore = true;
-			Title = "nearby now";
+
 			MenuItems = new ObservableCollection<HomeMenuItem> ();
+
 			MenuItems.Add (new HomeMenuItem {
 				Id = 0, Title = "nearby now", MenuType = MenuType.NearbyNow ,  Icon = "twitternav.png"
 			});

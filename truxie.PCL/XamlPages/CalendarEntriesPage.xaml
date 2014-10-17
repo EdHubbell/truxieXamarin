@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-		x:Name="myContentPage"
-		BindingContext="{x:Reference myContentPage}" 		
 		x:Class="truxie.PCL.CalendarEntriesPage" 
 		Title="CalendarXaml"
 		>
@@ -17,8 +15,7 @@
 	</ContentPage.ToolbarItems>
 
 	<ListView x:Name="calendarListView" 
-			RowHeight="60" 
-			ItemsSource="{Binding Items}">
+			RowHeight="60">
 		  <ListView.ItemTemplate>
 		      <DataTemplate>
 		        <ViewCell>

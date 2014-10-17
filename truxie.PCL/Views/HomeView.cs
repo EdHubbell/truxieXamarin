@@ -1,25 +1,37 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Collections.Generic;
+using Acr.XamForms.UserDialogs;
+using Acr.XamForms.ViewModels;
 
 namespace truxie.PCL
 {
 	public class HomeView : MasterDetailPage
 	{
-		private HomeViewModel ViewModel {
+
+		private HomeViewModel _homeViewModel {
 			get { return BindingContext as HomeViewModel; }
 		}
 
-		HomeMasterView master;
+		private HomeMasterView master;
+
+//		private HomeViewModel homeViewModel;
+
 		private Dictionary<MenuType, NavigationPage> pages;
 
 		public HomeView ()
 		{
+			//InitializeComponent();
 
 			pages = new Dictionary<MenuType, NavigationPage> ();
-			BindingContext = new HomeViewModel ();
 
-			Master = master = new HomeMasterView (ViewModel);
+			this.BindingContext = new HomeViewModel();
+
+//			_homeViewModel = new HomeViewModel ();
+
+			Title = "Test Title";
+
+			Master = master = new HomeMasterView (_homeViewModel);
 
 			var homeNav = new NavigationPage (master.PageSelection) {
 				BarBackgroundColor = Color.FromRgb(250, 176, 59), BarTextColor = Color.White
@@ -52,7 +64,7 @@ namespace truxie.PCL
 	}
 
 
-	public class HomeMasterView : BaseView
+	public class HomeMasterView : ContentPage
 	{
 		public Action<MenuType> PageSelectionChanged;
 		private Page pageSelection;
@@ -67,19 +79,18 @@ namespace truxie.PCL
 			}
 		}
 
-//		private AboutView about;
-//		private BlogView blog;
-
 		private NearbyNowView nearbyNow;
 		private TruckTweetsView truckTweets;
 		private VendorCalendarView vendorCalendar;
 		private CalendarEntriesPage vendorCalendarXaml;
+		private HomeViewModel homeViewModel;
 
-		public HomeMasterView (HomeViewModel viewModel)
+		public HomeMasterView (HomeViewModel homeViewModel)
 		{
 			BackgroundColor = Color.FromRgb (234, 234, 234);
 			this.Icon = "slideout.png";
-			BindingContext = viewModel;
+			this.homeViewModel = homeViewModel;
+			this.Title = "Seriously?";
 
 
 			var layout = new StackLayout { Spacing = 0 };
@@ -102,11 +113,11 @@ namespace truxie.PCL
 			var listView = new ListView ();
 			listView.ItemTemplate = new DataTemplate (() => {
 				Label titleLabel = new Label ();
-				titleLabel.SetBinding (Label.TextProperty, HomeViewModel.TitlePropertyName);
-				//titleLabel.SetBinding (ImageCell.ImageSourceProperty, "Icon");
+
+				titleLabel.SetBinding (Label.TextProperty, "Title");
 				titleLabel.TextColor = Color.White;
 				titleLabel.BackgroundColor = Color.Transparent;
-				//BoxView boxView=new BoxView();
+
 				Image boxView = new Image ();
 				boxView.SetBinding (Image.SourceProperty, "Icon");
 				boxView.BackgroundColor = Color.Transparent;
@@ -137,7 +148,7 @@ namespace truxie.PCL
 //
 //			listView.ItemTemplate = cell;
 
-			listView.ItemsSource = viewModel.MenuItems;
+			listView.ItemsSource = this.homeViewModel.MenuItems;
 			if (nearbyNow == null)
 				nearbyNow = new NearbyNowView ();
 
@@ -177,7 +188,7 @@ namespace truxie.PCL
 				}
 			};
 
-			listView.SelectedItem = viewModel.MenuItems [0];
+			//listView.SelectedItem = MenuItems [0];
 			layout.Children.Add (listView);
 			listView.BackgroundColor = Color.Gray;
 			Content = layout;
