@@ -6,6 +6,11 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Xamarin.Forms;
 using truxie.PCL;
+using WebSocket4Net;
+using Xamarin.Forms.Labs.iOS;
+
+
+
 
 namespace truxie.iOS
 {
@@ -13,7 +18,7 @@ namespace truxie.iOS
 	// User Interface of the application, as well as listening (and optionally responding) to
 	// application events from iOS.
 	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
+	public partial class AppDelegate : XFormsApplicationDelegate
 	{
 		// class-level declarations
 		UIWindow window;
@@ -27,6 +32,9 @@ namespace truxie.iOS
 		//
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
+			WebSocket4Net.WebSocket testsockey; 
+
+
 			MeasurementManager.Measurement = new MeasurementHelper ();
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);

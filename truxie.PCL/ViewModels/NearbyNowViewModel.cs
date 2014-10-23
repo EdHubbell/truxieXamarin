@@ -2,48 +2,32 @@
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
+using Xamarin.Forms.Labs.Mvvm;
 
 namespace truxie.PCL
 {
-	public class NearbyNowViewModel : BaseViewModel
+	public class NearbyNowViewModel : LocationViewModel
 	{
 		public event Action<string,string> DisplayErrorAction;
 
-		//private readonly IGeoLocator location;
-		//WebService Service;
-
 		public ObservableCollection<VendorEvent> Items{ get; set; }
 
-		public NearbyNowViewModel ()
+		public NearbyNowViewModel ( )
 		{
-			//this.location = new GeoLocator ();
-			//Service = new WebService ();
+			//base.Init();
+
 			Title = "nearby now";
 			Icon = "slideout.png";
 			Items = new ObservableCollection<VendorEvent> ();
 			IsBusy = false;
 		}
 
-		private async void OnPositionChanged (object sender, PositionEventArgs e)
-		{
-			if (IsBusy)
-				return;
-			this.UserLatitude = e.Position.Latitude;
-			this.UserLongitude = e.Position.Longitude;
-			if (DisplayErrorAction != null)
-				DisplayErrorAction ("Current Location", string.Format("Latitude:{0} \r\nLongitude:{1}",this.UserLatitude,this.UserLongitude));
-			await ExecuteDataLoadCommand ();
-		}
-
-		double UserLatitude {
-			get;
-			set;
-		}
-
-		double UserLongitude {
-			get;
-			set;
-		}
+//		public override void OnAppearing() {
+//
+//			base.OnAppearing();
+//
+//			ExecuteDataLoadCommand();
+//		}
 
 		private Command refreshCommand;
 
@@ -83,13 +67,25 @@ namespace truxie.PCL
 
 		private async Task ExecuteDataLoadCommand ()
 		{
+	
 			if (IsBusy)
 				return;
 
 			IsBusy = true;
 
+			//this.Latitude
+
+			System.Diagnostics.Debug.WriteLine(Latitude);
+			System.Diagnostics.Debug.WriteLine (Longitude);
+
+	//		await dialogService.AlertAsync("Test alert", "Alert Title", "CHANGE ME!");
+
 			// This list is so short that we should always just do a clear and fill.  No refreshing, no scrolling down.
 			Items.Clear ();
+
+
+			//this.geolocator.StartListening ();
+
 
 			//var res = await Service.GetNearbyVendorEventList (UserLatitude.ToString(), UserLongitude.ToString());//("35.994033", "-78.898619");
 

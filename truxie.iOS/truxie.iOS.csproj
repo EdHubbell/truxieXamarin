@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{E5B4A6E4-CAAA-4E33-BC65-4D8214905BB3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Hanselman.iOS</RootNamespace>
+    <RootNamespace>truxie.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <NuGetPackageImportStamp>7e3af449</NuGetPackageImportStamp>
   </PropertyGroup>
@@ -121,20 +121,23 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.Mobile">
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoTouch\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms.Mobile.iOS">
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoTouch\Acr.XamForms.Mobile.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Mobile">
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\MonoTouch\Xamarin.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Maps.iOS">
       <HintPath>..\packages\Xamarin.Forms.Maps.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Maps.iOS.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Maps">
       <HintPath>..\packages\Xamarin.Forms.Maps.1.2.3.6257\lib\MonoTouch10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocket4Net">
+      <HintPath>..\packages\WebSocket4Net.0.10\lib\monotouch10\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ExifLib">
+      <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Labs.iOS">
+      <HintPath>..\packages\Xamarin.Forms.Labs.1.2.0\lib\MonoTouch\Xamarin.Forms.Labs.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Labs">
+      <HintPath>..\packages\Xamarin.Forms.Labs.1.2.0\lib\MonoTouch\Xamarin.Forms.Labs.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

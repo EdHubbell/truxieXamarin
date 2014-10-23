@@ -1,37 +1,26 @@
 ﻿using System;
 using Xamarin.Forms;
 using System.Collections.Generic;
-using Acr.XamForms.UserDialogs;
-using Acr.XamForms.ViewModels;
 
 namespace truxie.PCL
 {
 	public class HomeView : MasterDetailPage
 	{
-
-		private HomeViewModel _homeViewModel {
-			get { return BindingContext as HomeViewModel; }
-		}
-
+	
 		private HomeMasterView master;
-
-//		private HomeViewModel homeViewModel;
 
 		private Dictionary<MenuType, NavigationPage> pages;
 
 		public HomeView ()
 		{
-			//InitializeComponent();
-
 			pages = new Dictionary<MenuType, NavigationPage> ();
+
 
 			this.BindingContext = new HomeViewModel();
 
-//			_homeViewModel = new HomeViewModel ();
+			Title = "na";
 
-			Title = "Test Title";
-
-			Master = master = new HomeMasterView (_homeViewModel);
+			this.Master = master = new HomeMasterView ();
 
 			var homeNav = new NavigationPage (master.PageSelection) {
 				BarBackgroundColor = Color.FromRgb(250, 176, 59), BarTextColor = Color.White
@@ -80,17 +69,19 @@ namespace truxie.PCL
 		}
 
 		private NearbyNowView nearbyNow;
+		//private WebSocketView webSocketView;
 		private TruckTweetsView truckTweets;
 		private VendorCalendarView vendorCalendar;
 		private CalendarEntriesPage vendorCalendarXaml;
-		private HomeViewModel homeViewModel;
 
-		public HomeMasterView (HomeViewModel homeViewModel)
+		public HomeMasterView ()
 		{
 			BackgroundColor = Color.FromRgb (234, 234, 234);
 			this.Icon = "slideout.png";
-			this.homeViewModel = homeViewModel;
-			this.Title = "Seriously?";
+			this.Title = "na";
+
+
+			//this.location = new IGeolocator;
 
 
 			var layout = new StackLayout { Spacing = 0 };
@@ -140,15 +131,9 @@ namespace truxie.PCL
 				};
 			});
 
-//			var cell = new DataTemplate(typeof(ListImageCell));
-//
-//			cell.SetBinding (TextCell.TextProperty, HomeViewModel.TitlePropertyName);
-//			cell.SetBinding (ImageCell.ImageSourceProperty, "Icon");
-//			cell.SetValue (TextCell.TextColorProperty, Color.Red);
-//
-//			listView.ItemTemplate = cell;
+			// Bind the listview to the MenuItems property of the ViewModel
+			listView.SetBinding (ListView.ItemsSourceProperty, "MenuItems");
 
-			listView.ItemsSource = this.homeViewModel.MenuItems;
 			if (nearbyNow == null)
 				nearbyNow = new NearbyNowView ();
 
@@ -188,7 +173,6 @@ namespace truxie.PCL
 				}
 			};
 
-			//listView.SelectedItem = MenuItems [0];
 			layout.Children.Add (listView);
 			listView.BackgroundColor = Color.Gray;
 			Content = layout;

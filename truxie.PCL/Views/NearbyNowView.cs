@@ -13,8 +13,8 @@ namespace truxie.PCL
 
 		public NearbyNowView ()
 		{
-
-			BindingContext = new NearbyNowViewModel ();
+		
+			BindingContext = new NearbyNowViewModel();
 
 			var refresh = new ToolbarItem {
 				Command = ViewModel.RefreshCommand,
@@ -53,7 +53,10 @@ namespace truxie.PCL
 			base.OnAppearing ();
 			if (ViewModel == null || !ViewModel.CanLoadMore || ViewModel.IsBusy)
 				return;
-			ViewModel.AppearingCommand.Execute (null);
+//			ViewModel.AppearingCommand.Execute (null);
+
+			//ViewModel.OnAppearing ();
+
 			//ViewModel.RefreshCommand.Execute (null);
 		}
 

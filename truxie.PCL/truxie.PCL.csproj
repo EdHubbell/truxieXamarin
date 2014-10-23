@@ -54,11 +54,6 @@
     <Compile Include="Models\VendorEvent.cs" />
     <Compile Include="Models\VendorEventsResponse.cs" />
     <Compile Include="Models\VendorLocation.cs" />
-    <Compile Include="Location\GeoLocator.cs" />
-    <Compile Include="Location\IGeoLocator.cs" />
-    <Compile Include="Location\Position.cs" />
-    <Compile Include="Location\PositionErrorEventArgs.cs" />
-    <Compile Include="Location\PositionEventArgs.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BlogFeedViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -79,6 +74,12 @@
     <Compile Include="XamlPages\CalendarEntriesPage.xaml.cs">
       <DependentUpon>CalendarEntriesPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WebSocket4Net.cs" />
+    <Compile Include="ViewModels\LocationViewModel.cs" />
+    <Compile Include="Location\GeoLocator.cs" />
+    <Compile Include="Location\Position.cs" />
+    <Compile Include="Location\PositionErrorEventArgs.cs" />
+    <Compile Include="Location\PositionEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -86,11 +87,11 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Models\" />
-    <Folder Include="Location\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
     <Folder Include="XamlPages\" />
     <Folder Include="XamlViews\" />
+    <Folder Include="Location\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -114,20 +115,11 @@
     <Reference Include="System.Net.Http.Extensions">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Acr.XamForms.Mobile">
-      <HintPath>..\packages\Acr.XamForms.Mobile.1.5\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.Mobile.dll</HintPath>
-    </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.0\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Labs">
       <HintPath>..\packages\Xamarin.Forms.Labs.1.2.0\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\Xamarin.Forms.Labs.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms.UserDialogs">
-      <HintPath>..\packages\Acr.XamForms.UserDialogs.2.1.2\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.UserDialogs.dll</HintPath>
-    </Reference>
-    <Reference Include="Acr.XamForms">
-      <HintPath>..\packages\Acr.XamForms.1.2.0\lib\portable-win+net45+MonoAndroid+MonoTouch+wp8\Acr.XamForms.dll</HintPath>
     </Reference>
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.3.5.2\lib\portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Autofac.dll</HintPath>

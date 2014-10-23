@@ -2,13 +2,16 @@
 using System.ComponentModel;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using Xamarin.Forms.Labs.Mvvm;
 
 namespace truxie.PCL
 {
-	public class BaseViewModel 
+	public class BaseViewModel : ViewModel
 	{
+
 		public BaseViewModel ()
 		{
+		
 		}
 
 		private string title = string.Empty;

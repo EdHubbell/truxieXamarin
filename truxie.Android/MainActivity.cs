@@ -9,11 +9,12 @@ using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using truxie.PCL; 
+using Xamarin.Forms.Labs.Droid;
 
 namespace truxieAndroid
 {
 	[Activity (Label = "truxie", MainLauncher = true)]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : XFormsApplicationDroid
 	{
 
 		protected override void OnCreate (Bundle bundle)

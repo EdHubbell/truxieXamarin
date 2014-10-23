@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Acr.XamForms.ViewModels;
+using Xamarin.Forms.Labs.Mvvm;
 
 namespace truxie.PCL
 {
