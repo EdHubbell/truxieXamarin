@@ -26,8 +26,41 @@ namespace truxie.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::Acr.XamForms.Mobile.Droid.Resource.String.ApplicationName = global::truxie.Android.Resource.String.ApplicationName;
-			global::Acr.XamForms.Mobile.Droid.Resource.String.Hello = global::truxie.Android.Resource.String.Hello;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_active_month_bg = global::truxie.Android.Resource.Color.calendar_active_month_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_bg = global::truxie.Android.Resource.Color.calendar_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_divider = global::truxie.Android.Resource.Color.calendar_divider;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_highlighted_day_bg = global::truxie.Android.Resource.Color.calendar_highlighted_day_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_inactive_month_bg = global::truxie.Android.Resource.Color.calendar_inactive_month_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_selected_day_bg = global::truxie.Android.Resource.Color.calendar_selected_day_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_selected_range_bg = global::truxie.Android.Resource.Color.calendar_selected_range_bg;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_active = global::truxie.Android.Resource.Color.calendar_text_active;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_inactive = global::truxie.Android.Resource.Color.calendar_text_inactive;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_selected = global::truxie.Android.Resource.Color.calendar_text_selected;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_selector = global::truxie.Android.Resource.Color.calendar_text_selector;
+			global::Xamarin.Forms.Labs.Droid.Resource.Color.calendar_text_unselectable = global::truxie.Android.Resource.Color.calendar_text_unselectable;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_day_headers_paddingbottom = global::truxie.Android.Resource.Dimension.calendar_day_headers_paddingbottom;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_month_title_bottommargin = global::truxie.Android.Resource.Dimension.calendar_month_title_bottommargin;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_month_topmargin = global::truxie.Android.Resource.Dimension.calendar_month_topmargin;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_text_medium = global::truxie.Android.Resource.Dimension.calendar_text_medium;
+			global::Xamarin.Forms.Labs.Droid.Resource.Dimension.calendar_text_small = global::truxie.Android.Resource.Dimension.calendar_text_small;
+			global::Xamarin.Forms.Labs.Droid.Resource.Drawable.ad16 = global::truxie.Android.Resource.Drawable.ad16;
+			global::Xamarin.Forms.Labs.Droid.Resource.Drawable.calendar_bg_selector = global::truxie.Android.Resource.Drawable.calendar_bg_selector;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.calendar_grid = global::truxie.Android.Resource.Id.calendar_grid;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.calendar_view = global::truxie.Android.Resource.Id.calendar_view;
+			global::Xamarin.Forms.Labs.Droid.Resource.Id.title = global::truxie.Android.Resource.Id.title;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.calendar_picker = global::truxie.Android.Resource.Layout.calendar_picker;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.dialog = global::truxie.Android.Resource.Layout.dialog;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.month = global::truxie.Android.Resource.Layout.month;
+			global::Xamarin.Forms.Labs.Droid.Resource.Layout.week = global::truxie.Android.Resource.Layout.week;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.day_name_format = global::truxie.Android.Resource.String.day_name_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.full_date_format = global::truxie.Android.Resource.String.full_date_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.invalid_date = global::truxie.Android.Resource.String.invalid_date;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.library_name = global::truxie.Android.Resource.String.library_name;
+			global::Xamarin.Forms.Labs.Droid.Resource.String.month_name_format = global::truxie.Android.Resource.String.month_name_format;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell = global::truxie.Android.Resource.Style.CalendarCell;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_CalendarDate = global::truxie.Android.Resource.Style.CalendarCell_CalendarDate;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_DayHeader = global::truxie.Android.Resource.Style.CalendarCell_DayHeader;
+			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarTitle = global::truxie.Android.Resource.Style.CalendarTitle;
 		}
 		
 		public partial class Animation
@@ -549,8 +582,8 @@ namespace truxie.Android
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f09001a
-			public const int abc_search_url_text_holo = 2131296282;
+			// aapt resource value: 0x7f090025
+			public const int abc_search_url_text_holo = 2131296293;
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_search_url_text_normal = 2131296256;
@@ -560,6 +593,42 @@ namespace truxie.Android
 			
 			// aapt resource value: 0x7f090001
 			public const int abc_search_url_text_selected = 2131296257;
+			
+			// aapt resource value: 0x7f09001a
+			public const int calendar_active_month_bg = 2131296282;
+			
+			// aapt resource value: 0x7f09001b
+			public const int calendar_bg = 2131296283;
+			
+			// aapt resource value: 0x7f09001c
+			public const int calendar_divider = 2131296284;
+			
+			// aapt resource value: 0x7f09001f
+			public const int calendar_highlighted_day_bg = 2131296287;
+			
+			// aapt resource value: 0x7f09001d
+			public const int calendar_inactive_month_bg = 2131296285;
+			
+			// aapt resource value: 0x7f09001e
+			public const int calendar_selected_day_bg = 2131296286;
+			
+			// aapt resource value: 0x7f090020
+			public const int calendar_selected_range_bg = 2131296288;
+			
+			// aapt resource value: 0x7f090022
+			public const int calendar_text_active = 2131296290;
+			
+			// aapt resource value: 0x7f090021
+			public const int calendar_text_inactive = 2131296289;
+			
+			// aapt resource value: 0x7f090023
+			public const int calendar_text_selected = 2131296291;
+			
+			// aapt resource value: 0x7f090026
+			public const int calendar_text_selector = 2131296294;
+			
+			// aapt resource value: 0x7f090024
+			public const int calendar_text_unselectable = 2131296292;
 			
 			// aapt resource value: 0x7f09000c
 			public const int common_action_bar_splitter = 2131296268;
@@ -591,11 +660,11 @@ namespace truxie.Android
 			// aapt resource value: 0x7f090008
 			public const int common_signin_btn_light_text_pressed = 2131296264;
 			
-			// aapt resource value: 0x7f09001b
-			public const int common_signin_btn_text_dark = 2131296283;
+			// aapt resource value: 0x7f090027
+			public const int common_signin_btn_text_dark = 2131296295;
 			
-			// aapt resource value: 0x7f09001c
-			public const int common_signin_btn_text_light = 2131296284;
+			// aapt resource value: 0x7f090028
+			public const int common_signin_btn_text_light = 2131296296;
 			
 			// aapt resource value: 0x7f090012
 			public const int wallet_bright_foreground_disabled_holo_light = 2131296274;
@@ -636,11 +705,11 @@ namespace truxie.Android
 			// aapt resource value: 0x7f090019
 			public const int wallet_link_text_light = 2131296281;
 			
-			// aapt resource value: 0x7f09001d
-			public const int wallet_primary_text_holo_light = 2131296285;
+			// aapt resource value: 0x7f090029
+			public const int wallet_primary_text_holo_light = 2131296297;
 			
-			// aapt resource value: 0x7f09001e
-			public const int wallet_secondary_text_holo_dark = 2131296286;
+			// aapt resource value: 0x7f09002a
+			public const int wallet_secondary_text_holo_dark = 2131296298;
 			
 			static Color()
 			{
@@ -705,6 +774,21 @@ namespace truxie.Android
 			
 			// aapt resource value: 0x7f0a000c
 			public const int abc_search_view_text_min_width = 2131361804;
+			
+			// aapt resource value: 0x7f0a0015
+			public const int calendar_day_headers_paddingbottom = 2131361813;
+			
+			// aapt resource value: 0x7f0a0017
+			public const int calendar_month_title_bottommargin = 2131361815;
+			
+			// aapt resource value: 0x7f0a0016
+			public const int calendar_month_topmargin = 2131361814;
+			
+			// aapt resource value: 0x7f0a0018
+			public const int calendar_text_medium = 2131361816;
+			
+			// aapt resource value: 0x7f0a0019
+			public const int calendar_text_small = 2131361817;
 			
 			// aapt resource value: 0x7f0a0013
 			public const int dialog_fixed_height_major = 2131361811;
@@ -996,172 +1080,178 @@ namespace truxie.Android
 			public const int about = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int blog = 2130837592;
+			public const int ad16 = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int common_signin_btn_icon_dark = 2130837593;
+			public const int blog = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int common_signin_btn_icon_disabled_dark = 2130837594;
+			public const int calendar_bg_selector = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int common_signin_btn_icon_disabled_focus_dark = 2130837595;
+			public const int common_signin_btn_icon_dark = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int common_signin_btn_icon_disabled_focus_light = 2130837596;
+			public const int common_signin_btn_icon_disabled_dark = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int common_signin_btn_icon_disabled_light = 2130837597;
+			public const int common_signin_btn_icon_disabled_focus_dark = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int common_signin_btn_icon_focus_dark = 2130837598;
+			public const int common_signin_btn_icon_disabled_focus_light = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int common_signin_btn_icon_focus_light = 2130837599;
+			public const int common_signin_btn_icon_disabled_light = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int common_signin_btn_icon_light = 2130837600;
+			public const int common_signin_btn_icon_focus_dark = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int common_signin_btn_icon_normal_dark = 2130837601;
+			public const int common_signin_btn_icon_focus_light = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int common_signin_btn_icon_normal_light = 2130837602;
+			public const int common_signin_btn_icon_light = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int common_signin_btn_icon_pressed_dark = 2130837603;
+			public const int common_signin_btn_icon_normal_dark = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int common_signin_btn_icon_pressed_light = 2130837604;
+			public const int common_signin_btn_icon_normal_light = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int common_signin_btn_text_dark = 2130837605;
+			public const int common_signin_btn_icon_pressed_dark = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int common_signin_btn_text_disabled_dark = 2130837606;
+			public const int common_signin_btn_icon_pressed_light = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int common_signin_btn_text_disabled_focus_dark = 2130837607;
+			public const int common_signin_btn_text_dark = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int common_signin_btn_text_disabled_focus_light = 2130837608;
+			public const int common_signin_btn_text_disabled_dark = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int common_signin_btn_text_disabled_light = 2130837609;
+			public const int common_signin_btn_text_disabled_focus_dark = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int common_signin_btn_text_focus_dark = 2130837610;
+			public const int common_signin_btn_text_disabled_focus_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int common_signin_btn_text_focus_light = 2130837611;
+			public const int common_signin_btn_text_disabled_light = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int common_signin_btn_text_light = 2130837612;
+			public const int common_signin_btn_text_focus_dark = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int common_signin_btn_text_normal_dark = 2130837613;
+			public const int common_signin_btn_text_focus_light = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int common_signin_btn_text_normal_light = 2130837614;
+			public const int common_signin_btn_text_light = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int common_signin_btn_text_pressed_dark = 2130837615;
+			public const int common_signin_btn_text_normal_dark = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int common_signin_btn_text_pressed_light = 2130837616;
+			public const int common_signin_btn_text_normal_light = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int facebook = 2130837617;
+			public const int common_signin_btn_text_pressed_dark = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int googleplus = 2130837618;
+			public const int common_signin_btn_text_pressed_light = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int ic_launcher = 2130837619;
+			public const int facebook = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int ic_plusone_medium_off_client = 2130837620;
+			public const int googleplus = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int ic_plusone_small_off_client = 2130837621;
+			public const int ic_launcher = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int ic_plusone_standard_off_client = 2130837622;
+			public const int ic_plusone_medium_off_client = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int ic_plusone_tall_off_client = 2130837623;
+			public const int ic_plusone_small_off_client = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int instagram = 2130837624;
+			public const int ic_plusone_standard_off_client = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int mr_ic_audio_vol = 2130837625;
+			public const int ic_plusone_tall_off_client = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int mr_ic_media_route_connecting_holo_dark = 2130837626;
+			public const int instagram = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int mr_ic_media_route_connecting_holo_light = 2130837627;
+			public const int mr_ic_audio_vol = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int mr_ic_media_route_disabled_holo_dark = 2130837628;
+			public const int mr_ic_media_route_connecting_holo_dark = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int mr_ic_media_route_disabled_holo_light = 2130837629;
+			public const int mr_ic_media_route_connecting_holo_light = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int mr_ic_media_route_holo_dark = 2130837630;
+			public const int mr_ic_media_route_disabled_holo_dark = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int mr_ic_media_route_holo_light = 2130837631;
+			public const int mr_ic_media_route_disabled_holo_light = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int mr_ic_media_route_off_holo_dark = 2130837632;
+			public const int mr_ic_media_route_holo_dark = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int mr_ic_media_route_off_holo_light = 2130837633;
+			public const int mr_ic_media_route_holo_light = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int mr_ic_media_route_on_0_holo_dark = 2130837634;
+			public const int mr_ic_media_route_off_holo_dark = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int mr_ic_media_route_on_0_holo_light = 2130837635;
+			public const int mr_ic_media_route_off_holo_light = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int mr_ic_media_route_on_1_holo_dark = 2130837636;
+			public const int mr_ic_media_route_on_0_holo_dark = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int mr_ic_media_route_on_1_holo_light = 2130837637;
+			public const int mr_ic_media_route_on_0_holo_light = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int mr_ic_media_route_on_2_holo_dark = 2130837638;
+			public const int mr_ic_media_route_on_1_holo_dark = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int mr_ic_media_route_on_2_holo_light = 2130837639;
+			public const int mr_ic_media_route_on_1_holo_light = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int mr_ic_media_route_on_holo_dark = 2130837640;
+			public const int mr_ic_media_route_on_2_holo_dark = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int mr_ic_media_route_on_holo_light = 2130837641;
+			public const int mr_ic_media_route_on_2_holo_light = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int powered_by_google_dark = 2130837642;
+			public const int mr_ic_media_route_on_holo_dark = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int powered_by_google_light = 2130837643;
+			public const int mr_ic_media_route_on_holo_light = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int refresh = 2130837644;
+			public const int powered_by_google_dark = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int slideout = 2130837645;
+			public const int powered_by_google_light = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int twitter = 2130837646;
+			public const int refresh = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int twitternav = 2130837647;
+			public const int slideout = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int twitter = 2130837648;
+			
+			// aapt resource value: 0x7f020091
+			public const int twitternav = 2130837649;
 			
 			static Drawable()
 			{
@@ -1229,6 +1319,12 @@ namespace truxie.Android
 			
 			// aapt resource value: 0x7f070026
 			public const int buy_with_google = 2131165222;
+			
+			// aapt resource value: 0x7f070050
+			public const int calendar_grid = 2131165264;
+			
+			// aapt resource value: 0x7f07004e
+			public const int calendar_view = 2131165262;
 			
 			// aapt resource value: 0x7f07003f
 			public const int checkbox = 2131165247;
@@ -1299,20 +1395,20 @@ namespace truxie.Android
 			// aapt resource value: 0x7f070024
 			public const int match_parent = 2131165220;
 			
-			// aapt resource value: 0x7f070052
-			public const int media_route_control_frame = 2131165266;
+			// aapt resource value: 0x7f070054
+			public const int media_route_control_frame = 2131165268;
 			
-			// aapt resource value: 0x7f070053
-			public const int media_route_disconnect_button = 2131165267;
-			
-			// aapt resource value: 0x7f07004f
-			public const int media_route_list = 2131165263;
-			
-			// aapt resource value: 0x7f070050
-			public const int media_route_volume_layout = 2131165264;
+			// aapt resource value: 0x7f070055
+			public const int media_route_disconnect_button = 2131165269;
 			
 			// aapt resource value: 0x7f070051
-			public const int media_route_volume_slider = 2131165265;
+			public const int media_route_list = 2131165265;
+			
+			// aapt resource value: 0x7f070052
+			public const int media_route_volume_layout = 2131165266;
+			
+			// aapt resource value: 0x7f070053
+			public const int media_route_volume_slider = 2131165267;
 			
 			// aapt resource value: 0x7f070012
 			public const int middle = 2131165202;
@@ -1320,8 +1416,8 @@ namespace truxie.Android
 			// aapt resource value: 0x7f07002b
 			public const int monochrome = 2131165227;
 			
-			// aapt resource value: 0x7f07004e
-			public const int myButton = 2131165262;
+			// aapt resource value: 0x7f07004f
+			public const int myButton = 2131165263;
 			
 			// aapt resource value: 0x7f070009
 			public const int never = 2131165193;
@@ -1533,19 +1629,31 @@ namespace truxie.Android
 			public const int abc_simple_decor = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int Main = 2130903064;
+			public const int calendar_picker = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int mr_media_route_chooser_dialog = 2130903065;
+			public const int dialog = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int mr_media_route_controller_dialog = 2130903066;
+			public const int Main = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int mr_media_route_list_item = 2130903067;
+			public const int month = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int support_simple_spinner_dropdown_item = 2130903068;
+			public const int mr_media_route_chooser_dialog = 2130903068;
+			
+			// aapt resource value: 0x7f03001d
+			public const int mr_media_route_controller_dialog = 2130903069;
+			
+			// aapt resource value: 0x7f03001e
+			public const int mr_media_route_list_item = 2130903070;
+			
+			// aapt resource value: 0x7f03001f
+			public const int support_simple_spinner_dropdown_item = 2130903071;
+			
+			// aapt resource value: 0x7f030020
+			public const int week = 2130903072;
 			
 			static Layout()
 			{
@@ -1559,12 +1667,6 @@ namespace truxie.Android
 		
 		public partial class String
 		{
-			
-			// aapt resource value: 0x7f05002e
-			public const int ApplicationName = 2131034158;
-			
-			// aapt resource value: 0x7f05002d
-			public const int Hello = 2131034157;
 			
 			// aapt resource value: 0x7f050007
 			public const int abc_action_bar_home_description = 2131034119;
@@ -1605,8 +1707,8 @@ namespace truxie.Android
 			// aapt resource value: 0x7f050011
 			public const int abc_shareactionprovider_share_with_application = 2131034129;
 			
-			// aapt resource value: 0x7f050030
-			public const int app_name = 2131034160;
+			// aapt resource value: 0x7f050033
+			public const int app_name = 2131034163;
 			
 			// aapt resource value: 0x7f05001e
 			public const int common_google_play_services_enable_button = 2131034142;
@@ -1683,8 +1785,23 @@ namespace truxie.Android
 			// aapt resource value: 0x7f05002b
 			public const int common_signin_button_text_long = 2131034155;
 			
+			// aapt resource value: 0x7f05002e
+			public const int day_name_format = 2131034158;
+			
+			// aapt resource value: 0x7f050031
+			public const int full_date_format = 2131034161;
+			
+			// aapt resource value: 0x7f050032
+			public const int hello = 2131034162;
+			
 			// aapt resource value: 0x7f05002f
-			public const int hello = 2131034159;
+			public const int invalid_date = 2131034159;
+			
+			// aapt resource value: 0x7f05002d
+			public const int library_name = 2131034157;
+			
+			// aapt resource value: 0x7f050030
+			public const int month_name_format = 2131034160;
 			
 			// aapt resource value: 0x7f050002
 			public const int mr_media_route_button_content_description = 2131034114;
@@ -1720,14 +1837,26 @@ namespace truxie.Android
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060094
-			public const int MyTheme = 2131099796;
+			// aapt resource value: 0x7f060095
+			public const int CalendarCell = 2131099797;
+			
+			// aapt resource value: 0x7f060097
+			public const int CalendarCell_CalendarDate = 2131099799;
 			
 			// aapt resource value: 0x7f060096
-			public const int MyTheme_ActionBar_TitleTextStyle = 2131099798;
+			public const int CalendarCell_DayHeader = 2131099798;
 			
-			// aapt resource value: 0x7f060095
-			public const int MyTheme_ActionBarStyle = 2131099797;
+			// aapt resource value: 0x7f060094
+			public const int CalendarTitle = 2131099796;
+			
+			// aapt resource value: 0x7f060098
+			public const int MyTheme = 2131099800;
+			
+			// aapt resource value: 0x7f06009a
+			public const int MyTheme_ActionBar_TitleTextStyle = 2131099802;
+			
+			// aapt resource value: 0x7f060099
+			public const int MyTheme_ActionBarStyle = 2131099801;
 			
 			// aapt resource value: 0x7f060067
 			public const int TextAppearance_AppCompat_Base_CompactMenu_Dialog = 2131099751;

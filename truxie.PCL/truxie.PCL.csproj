@@ -52,7 +52,6 @@
     <Compile Include="Models\Vendor.cs" />
     <Compile Include="Models\VendorCalendarEntry.cs" />
     <Compile Include="Models\VendorEvent.cs" />
-    <Compile Include="Models\VendorEventsResponse.cs" />
     <Compile Include="Models\VendorLocation.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\BlogFeedViewModel.cs" />
@@ -76,10 +75,6 @@
     </Compile>
     <Compile Include="WebSocket4Net.cs" />
     <Compile Include="ViewModels\LocationViewModel.cs" />
-    <Compile Include="Location\GeoLocator.cs" />
-    <Compile Include="Location\Position.cs" />
-    <Compile Include="Location\PositionErrorEventArgs.cs" />
-    <Compile Include="Location\PositionEventArgs.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" />
@@ -91,7 +86,6 @@
     <Folder Include="Views\" />
     <Folder Include="XamlPages\" />
     <Folder Include="XamlViews\" />
-    <Folder Include="Location\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

@@ -20,14 +20,15 @@ namespace truxie.PCL
 			Icon = "slideout.png";
 			Items = new ObservableCollection<VendorEvent> ();
 			IsBusy = false;
+		
 		}
 
-//		public override void OnAppearing() {
-//
-//			base.OnAppearing();
-//
-//			ExecuteDataLoadCommand();
-//		}
+		public override void OnAppearing() {
+
+			base.OnAppearing();
+
+			ExecuteDataLoadCommand();
+		}
 
 		private Command refreshCommand;
 
@@ -84,10 +85,11 @@ namespace truxie.PCL
 			Items.Clear ();
 
 
+
 			//this.geolocator.StartListening ();
 
 
-			//var res = await Service.GetNearbyVendorEventList (UserLatitude.ToString(), UserLongitude.ToString());//("35.994033", "-78.898619");
+			var res = await WebService.GetNearbyVendorEventList (Latitude.ToString(), Longitude.ToString());//("35.994033", "-78.898619");
 
 //			if (res.HasError) {
 //				if (DisplayErrorAction != null)

@@ -61,22 +61,14 @@ namespace truxie.PCL
 			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (apiResponse);
 		}
 
-//		public async Task<VendorEventsResponse> GetNearbyVendorEventList (String userLat, String userLon)
-//		{
-//			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
-//			var res = await PerformRequest (url, "", "GET");
-//			VendorEventsResponse response=null;
-//			try {
-//				VendorEvent[] array=JsonConvert.DeserializeObject<VendorEvent[]> (res);
-//				response=new VendorEventsResponse{VendorEvents=array};
-//			} catch (Exception) {
-//				response =JsonConvert.DeserializeObject<VendorEventsResponse> (res);
-//			}
-//
-//			return response;
-//		}
-//
+		static public async Task<VendorEvent[]> GetNearbyVendorEventList (String userLat, String userLon)
+		{
+			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
+			var apiResponse = await GetValuesFromApi (url);
 
+			return JsonConvert.DeserializeObject<VendorEvent[]> (apiResponse);
+
+		}
 
 	}
 }

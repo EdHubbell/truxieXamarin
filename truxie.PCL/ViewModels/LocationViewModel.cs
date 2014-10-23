@@ -17,23 +17,23 @@ namespace truxie.PCL
 			testing = "ghjg";
 		}
 			
-//		public override void OnAppearing() {
-//			geolocator.PositionChanged += this.OnPositionChanged;
-//			geolocator.StartListening(1, 10, false);
-//		}
-//
-//
-//		public override void OnDisappearing() {
-//			this.geolocator.PositionChanged -= this.OnPositionChanged;
-//			this.geolocator.StopListening();
-//		}
+		public virtual void OnAppearing() {
+			geolocator.PositionChanged += this.OnPositionChanged;
+			geolocator.StartListening(1, 10, false);
+		}
+			
+
+		public virtual void OnDisappearing() {
+			this.geolocator.PositionChanged -= this.OnPositionChanged;
+			this.geolocator.StopListening();
+		}
 
 
 		private void OnPositionChanged(object sender, PositionEventArgs e) {
 			this.Latitude = e.Position.Latitude;
 			this.Longitude = e.Position.Longitude;
-			//this.Altitude = e.Position.Altitude;
-			//this.Heading = e.Position.Heading;
+//			this.Altitude = e.Position.Altitude;
+//			this.Heading = e.Position.Heading;
 		}
 
 

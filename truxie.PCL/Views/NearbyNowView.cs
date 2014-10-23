@@ -55,7 +55,13 @@ namespace truxie.PCL
 				return;
 //			ViewModel.AppearingCommand.Execute (null);
 
-			//ViewModel.OnAppearing ();
+			ViewModel.OnAppearing ();
+
+			string testing;
+			testing = "lat" + ViewModel.Latitude.ToString();
+
+			DisplayAlert ("Question?", testing, "Yes", "No");
+
 
 			//ViewModel.RefreshCommand.Execute (null);
 		}
@@ -63,6 +69,9 @@ namespace truxie.PCL
 		protected override void OnDisappearing ()
 		{
 			base.OnDisappearing ();
+			ViewModel.OnDisappearing ();
+
+
 			//ViewModel.DisappearingCommand.Execute (null);
 		}
 	}
