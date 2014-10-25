@@ -44,6 +44,7 @@ namespace truxie.PCL
 		}
 
 
+
 		private double longitude;
 		public double Longitude {
 			get { return this.longitude; }

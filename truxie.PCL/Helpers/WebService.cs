@@ -4,6 +4,8 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Fusillade;
+//using ModernHttpClient;
 
 namespace truxie.PCL
 {
@@ -25,6 +27,16 @@ namespace truxie.PCL
 
 		}
 
+		static public async Task<string> GetValuesFromApFusillade (string url)
+		{
+
+			var client = new HttpClient(NetCache.UserInitiated);
+			var response = await client.GetAsync(url);
+			var apiResponse = await response.Content.ReadAsStringAsync();
+
+			return apiResponse;
+
+		}
 
 		static public async Task<StatusesResponse> GetCurrUserTweetsData (string currId, string currentUser)
 		{
@@ -45,7 +57,7 @@ namespace truxie.PCL
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/truckTweets?_dc=1408411784370&userLat={0}&userLon={1}&start={2}&limit={3}", userLat, userLon, start, limit);
 
-			string apiResponse = await GetValuesFromApi(url);
+			string apiResponse = await GetValuesFromApFusillade(url);
 
 			return JsonConvert.DeserializeObject<TruckTweet[]> (apiResponse);
 		}
