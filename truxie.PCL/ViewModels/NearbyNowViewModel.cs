@@ -76,7 +76,7 @@ namespace truxie.PCL
 
 			//this.Latitude
 
-			System.Diagnostics.Debug.WriteLine(Latitude);
+			System.Diagnostics.Debug.WriteLine (Latitude);
 			System.Diagnostics.Debug.WriteLine (Longitude);
 
 	//		await dialogService.AlertAsync("Test alert", "Alert Title", "CHANGE ME!");
@@ -84,21 +84,14 @@ namespace truxie.PCL
 			// This list is so short that we should always just do a clear and fill.  No refreshing, no scrolling down.
 			Items.Clear ();
 
-
-
 			//this.geolocator.StartListening ();
 
+			var res = await WebService.GetNearbyVendorEventList (Latitude, Longitude);//("35.994033", "-78.898619");
 
-			var res = await WebService.GetNearbyVendorEventList (Latitude.ToString(), Longitude.ToString());//("35.994033", "-78.898619");
+			foreach (var item in res) {
+				Items.Add (item);
+			}
 
-//			if (res.HasError) {
-//				if (DisplayErrorAction != null)
-//					DisplayErrorAction ("Load VendorEvents", res.Error);
-//			} else {
-//				foreach (var item in res.VendorEvents) {
-//					Items.Add (item);
-//				}
-//			}
 			IsBusy = false;
 		}
 

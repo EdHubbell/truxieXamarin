@@ -27,6 +27,7 @@ namespace truxie.PCL
 		[Newtonsoft.Json.JsonProperty ("truxie_tweet_id")]
 		public string TruxieTweetId{ get; set; }
 
+		[Newtonsoft.Json.JsonConverter(typeof(DateTimeConverter))]
 		[Newtonsoft.Json.JsonProperty ("truxie_timestamp")]
 		public DateTime TruxieTimestamp{ get; set; }
 

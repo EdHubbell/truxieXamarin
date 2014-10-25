@@ -23,6 +23,7 @@ namespace truxie.PCL
 			DateTime target =DateTime.MinValue;
 			try {
 				if (reader.Value is DateTime)
+		 
 					target = (DateTime)reader.Value;
 				else if (reader.Value.ToString () [reader.Value.ToString ().Length-1] == 'Z')
 					target = DateTime.Parse (reader.Value.ToString ());

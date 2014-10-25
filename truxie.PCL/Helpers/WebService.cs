@@ -73,9 +73,15 @@ namespace truxie.PCL
 			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (apiResponse);
 		}
 
-		static public async Task<VendorEvent[]> GetNearbyVendorEventList (String userLat, String userLon)
+		static public async Task<VendorEvent[]> GetNearbyVendorEventList (double userLat, double userLon)
 		{
-			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
+			if (userLat == 0) {
+				//36.012191,-78.8890576 - Duke Park - Simulators are forever throwing 0s for location.
+				userLat = 36.012191;
+				userLon = -78.8890576;			
+			}
+
+			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat.ToString(), userLon.ToString());
 			var apiResponse = await GetValuesFromApiFusillade (url);
 
 			return JsonConvert.DeserializeObject<VendorEvent[]> (apiResponse);

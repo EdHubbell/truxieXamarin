@@ -37,6 +37,17 @@ namespace truxie.PCL
 			refreshList.SetBinding<NearbyNowViewModel> (PullToRefreshListView.ItemsSourceProperty, vm => vm.Items);
 
 			//NavigationPage.SetHasNavigationBar(this,true);
+			refreshList.ItemTapped += (sender, args) => {
+				if (refreshList.SelectedItem == null)
+					return;
+
+				var vendor = refreshList.SelectedItem as Vendor;
+
+				SimpleMapView MapPage = new SimpleMapView(vendor);
+				Navigation.PushAsync(MapPage);
+
+				refreshList.SelectedItem = null;
+			};
 
 			Content = refreshList;
 
@@ -60,7 +71,7 @@ namespace truxie.PCL
 			string testing;
 			testing = "lat" + ViewModel.Latitude.ToString();
 
-			DisplayAlert ("Question?", testing, "Yes", "No");
+//			DisplayAlert ("Question?", testing, "Yes", "No");
 
 
 			//ViewModel.RefreshCommand.Execute (null);
