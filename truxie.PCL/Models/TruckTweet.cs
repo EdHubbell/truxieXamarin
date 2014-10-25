@@ -34,7 +34,7 @@ namespace truxie.PCL
 			get{ return ParseDate(CreatedAt); }
 		}
 
-		string ParseDate (DateTime date)
+		string ParseDate (DateTime tweetDate)
 		{
 			string result = string.Empty;
 
@@ -42,11 +42,11 @@ namespace truxie.PCL
 			try
 			{
 
-				var ticks = DateTime.UtcNow.Ticks - date.Ticks;
+				var ticks = DateTime.UtcNow.Ticks - tweetDate.Ticks;
 				var timeAgo = new DateTime (ticks);
 
 				if (timeAgo.Month > 0 && timeAgo.Year > 1) {
-					result = date.ToString ("d MMM");
+					result = tweetDate.ToString ("d MMM");
 				} else if (timeAgo.Year > 1 && timeAgo.Day > 0 ) {
 					result = string.Format ("{0}d ", timeAgo.Day);
 					if (timeAgo.Hour > 0)

@@ -61,6 +61,8 @@ namespace truxie.Android
 			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_CalendarDate = global::truxie.Android.Resource.Style.CalendarCell_CalendarDate;
 			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarCell_DayHeader = global::truxie.Android.Resource.Style.CalendarCell_DayHeader;
 			global::Xamarin.Forms.Labs.Droid.Resource.Style.CalendarTitle = global::truxie.Android.Resource.Style.CalendarTitle;
+			global::ModernHttpClient.Resource.String.library_name = global::truxie.Android.Resource.String.library_name;
+			global::Splat.Resource.String.library_name = global::truxie.Android.Resource.String.library_name;
 		}
 		
 		public partial class Animation

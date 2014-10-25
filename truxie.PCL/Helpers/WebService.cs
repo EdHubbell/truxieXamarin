@@ -42,7 +42,7 @@ namespace truxie.PCL
 		{
 			string url = string.Format (@"http://api.truxie.com/api/v1/twitterSearch?_dc={0}&include_entities=false&result_type=recent&q={1}&count=20", currId, currentUser);
 
-			string apiResponse = await GetValuesFromApi(url);
+			string apiResponse = await GetValuesFromApiFusillade(url);
 
 			StatusesResponse result = null;
 			try {
@@ -68,7 +68,7 @@ namespace truxie.PCL
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/truckCalendarEntries?userLat={0}&userLon={1}&page={2}", userLat, userLon, page);
 
-			string apiResponse = await GetValuesFromApi(url);
+			string apiResponse = await GetValuesFromApiFusillade(url);
 
 			return JsonConvert.DeserializeObject<VendorCalendarEntry[]> (apiResponse);
 		}
@@ -76,7 +76,7 @@ namespace truxie.PCL
 		static public async Task<VendorEvent[]> GetNearbyVendorEventList (String userLat, String userLon)
 		{
 			string url = string.Format (@"http://truxie.com/api/v1/nearbyList?userLat={0}&userLon={1}", userLat, userLon);
-			var apiResponse = await GetValuesFromApi (url);
+			var apiResponse = await GetValuesFromApiFusillade (url);
 
 			return JsonConvert.DeserializeObject<VendorEvent[]> (apiResponse);
 
