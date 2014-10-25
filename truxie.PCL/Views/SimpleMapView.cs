@@ -31,7 +31,19 @@ namespace truxie.PCL
 				IsShowingUser = true
 			};
 			var stack = new StackLayout { Spacing = 0 };
+			map.VerticalOptions = LayoutOptions.FillAndExpand;
+
+			map.HeightRequest = 100;
+			map.WidthRequest = 960;
+
+			// label shows up, but the map does not...
+			Label theLabel = new Label(); 
+			theLabel.Text = "fucking a";
+
+
 			stack.Children.Add(map);
+			stack.Children.Add(theLabel);
+
 			Content = stack;
 		}
 	}
