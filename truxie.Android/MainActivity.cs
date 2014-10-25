@@ -10,6 +10,7 @@ using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
 using truxie.PCL; 
 using Xamarin.Forms.Labs.Droid;
+using ModernHttpClient;
 
 namespace truxieAndroid
 {
